@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="now-is-life">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Carber Lee">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="AssetBundle增量打包">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="now-is-life">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Carber&#39;s Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>AssetBundle增量打包 - Carber&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Now-Is-Life</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/carbers">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>AssetBundle增量打包</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-05-06
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Unity/">#Unity</a> <a href="/tags/AssetBundle/">#AssetBundle</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>最近在给项目做增量打包的功能，之前也有其他项目碰到增量打包差异过大的问题。</p>
+<p>这里记录分享下做法与思考过程，主要解决以下两个问题：</p>
+<ul>
+<li>增量包的一致性</li>
+<li>打包的时间优化</li>
+</ul>
+<p>首先AssetBundle打包可以概括把给定的资源打成一个或多个AssetBundle。每个AssetBundle包含一个或多个资源，AssetBundle之间存在依赖关系，具体的打包规则应该是每个项目根据资源进行配置的。</p>
+<p>第一次全包，相当于给所有的资源文件分配归属AB。第二次增量打包，不仅要对新增的文件分配归属AB，还要把已经删除的文件从AB里面移除，最后确定修改的AB文件列表。Unity 5.0以后的AB打包接口已经支持增量打包，直接使用就可以了。</p>
+<h4 id="增量包的一致性"><a href="#增量包的一致性" class="headerlink" title="增量包的一致性"></a>增量包的一致性</h4><p>增量包一致性是指我们在不修改任何资源的情况下，增量包与首包的一致性。正常的情况下如果不修改任何资源，两次打包出来的包应该保持一致。然而由于项目做了较多的预处理，最后发现差异非常大。</p>
+<p>通过分析打包日志，发现项目在打包之前的预处理环节处理的资源不能保持一致性。包括CreateAsset，CreatePrefab，ReplacePrefab，SaveScene等行为。对于新创建的资源，由于guid发生变化会导致增量包不一致。对于Prefab和Scene资源，则是尽管Object并没有发生变化，但是Object与Object之间的顺序会发生变化，这也会导致增量包不一致。</p>
+<p><strong>最后问题就变成了解决预处理环节资源的一致性问题。</strong></p>
+<p>如果把所有预处理修改的资源都提交入库，这样应该就可以解决增量包一致性的问题了。但并不是所有的资源都能这样直接入库，而且自动化环节变手工环节还会有一些其他问题。<strong>这里把修改后资源提交到一个其他库就避免了冲突问题。</strong></p>
+<p>然后修改预处理环节的逻辑为，如果资源修改了重新执行，如果资源无修改则直接拷贝库里文件。对于meta文件，则应该不过是否重新生成，都要复用避免guid不一致的问题。再设计一个全局开关来控制新的增量逻辑，如果预处理规则修改了，则可以全部重新生成。正常已经上线是不允许做这样大的改动，不过日常开发过程中修改预处理规则是很常见的，所以需要支持。</p>
+<p>修改的资源相当于复制了一份，为了避免重新生成guid，这些资源应该放在Assets目录之外，对于生成出来的资源则没有这方面的限制。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3503018-06f7383ca20866f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自于网络"></p>
+<h4 id="打包的时间优化"><a href="#打包的时间优化" class="headerlink" title="打包的时间优化"></a>打包的时间优化</h4><p>在做完第一步，保持了原始资源的一致性后，增量打包这个事情可以算搞定了。由于资源没有发生变化，所以即使把所有资源都重新打一次包最后的结果也是一样的。不过既然是做增量打包，我们还是要考虑到整包的构建时间过长。所以这里要解决的问题就是打包时间优化。</p>
+<p>首先，这里还是包含了两个环节，一个是资源预处理，另外个是资源打包。前面已经讨论过为了资源一致性，我们需要把资源保存下来，没有修改的资源不需要重新生成。这里为节省打包时间，其实做出了巨大贡献。在剖析打包时间的时候，发现ReplacePrefab，SaveScene这些Unity API调用占用了大量的时间。这里并没有多少办法可以优化这些API调用的时间，一个显而易见的好办法就是少调用几次。</p>
+<p>对于如何获取修改的资源文件列表，可以通过svn，git等版本控制软件获取。在得到了文件修改列表之后，我们也知道了预处理环节中哪些资源是可以复用的，哪些资源是需要重新执行预处理的。在后面的打包环节也同样是利用这个资源差异列表来做增量。</p>
+<p>打包环节的增量就是确定哪些包需要打，这里是根据差异列表计算出哪些AB需要打包。由于AB之间会有依赖关系，所以要递归算出最后需要打包的AB列表。然后根据AB打包列表按打包规则顺序进行打包即可。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>资源一致性这个问题可能是大部分项目打包过程中会碰到的，因为Unity没有解决这个问题。这里通过自己保存资源以及维护资源修改列表来解决这个问题。顺便这个做法还能节省很多的构建时间，做增量预处理，一举两得。</p>
+<p>其实是在思考过程中突然意识到其实是要做这样一件事情，想到后整个事情并不复杂。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/carbers" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Carber Lee<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

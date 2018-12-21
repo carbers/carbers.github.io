@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="now-is-life">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Carber Lee">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Unity中资源依赖关系获取效率优化">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="now-is-life">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Carber&#39;s Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>Unity中资源依赖关系获取效率优化 - Carber&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Now-Is-Life</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/carbers">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Unity中资源依赖关系获取效率优化</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-08-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Unity/">#Unity</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>今天和大家分享一个优化经验，主要关于获取一个资源的依赖资源列表即对AssetDatabase.GetDependencies这个接口的调用效率优化。通过一步步优化最后在对工程中所有资源获取依赖资源的执行上提升了近100倍的效率。</p>
+<p>在对AssetBundle进行打包时候，需要获取资源的依赖关系，并生成最后所有资源的BundleName。这里主要的瓶颈就是对资源的依赖关系数据获取上。在工程实践中发现整个构建环节20分钟，16分钟是BuildAssetBundles开销，3分钟是GetDependencies开销。在增量构建中，BuildAssetBundles可降为1-3分钟，而GetDependencies则仍需要3分钟开销。当然对于资源数量较小的工程，这个优化就是一个可有可无的选项对构建速度影响不大。</p>
+<p>还有一个常见的应用场景就是快速查找资源资源的依赖数据以及被依赖数据，也可以通过这次的优化带来体验上提升。</p>
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>首先从分析AssetDatabase.GetDependencies这个接口的行为开始，简单的编写一个测试函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void Test()</span><br><span class="line">&#123;</span><br><span class="line">    long timeStamp = Stopwatch.GetTimestamp();</span><br><span class="line">    string[] dir = Directory.GetFiles(&quot;Assets/&quot;, &quot;*.*&quot;, SearchOption.AllDirectories);</span><br><span class="line">    for (int i = 0; i &lt; dir.Length; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (dir[i].EndsWith(&quot;.meta&quot;, System.StringComparison.OrdinalIgnoreCase))</span><br><span class="line">        &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        AssetDatabase.GetDependencies(dir[i], true);</span><br><span class="line">    &#125;</span><br><span class="line">    UnityEngine.Debug.LogFormat(</span><br><span class="line">        &quot;GetDependencies cost &#123;0&#125; ms.&quot;, </span><br><span class="line">        (Stopwatch.GetTimestamp() - timeStamp) * 1000 / Stopwatch.Frequency</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过执行这个函数可以了解这个函数的开销，以及获得数据为之后的优化做对比。</p>
+<p>第一次执行的时候较慢，有较高的硬盘读写，总共花费6.3mins。</p>
+<p>第二次执行的时候快了近一倍，基本无硬盘读写，总共花费3.2mins。</p>
+<p>这里硬盘是使用SSD，如果使用机械键盘则这里性能堪忧，第二次基本所有内容都进了内存，操作系统做了缓存，所以快了很多。所以换更好的硬盘可以提高这里的效率，不过现在的执行时间还是太长了。</p>
+<p>如果对所有的资源进行扫描通过GUID去查询并获取依赖关系，那应该不止这么点时间。这里猜测Unity做过一些数据预处理与缓存来优化这个接口效率。</p>
+<p>这时候第一个优化思路是Cache，通过缓存每次结果下次查询时可以立即返回结果。不过由于资源会修改，依赖文件会发生变化，所以缓存可能会出错。如果不能判断当前缓存是否有效，则只能在确保资源部修改的情况下使用缓存数据。</p>
+<p>这里使用<strong>AssetDatabase.GetAssetDependencyHash</strong>来验证缓存是否有效，这个接口返回Asset的一个Hash值（包括文件名以及meta文件），如果Hash值不变，我们可以认为这个Asset直接依赖的资源文件不变，由于直接依赖是通过Asset文件内部的GUID索引的，所以Hash不变即表示GUID不变，即依赖关系不变。这里缓存Hash值以及这个Asset的直接依赖。通过所有的直接依赖，可以快速的计算出这个Asset的全部依赖。</p>
+<p>AssetDatabase.GetAssetDependencyHash接口非常高效，这里简单讨论下。</p>
+<p>这部分数据在Import Asset的时候计算并缓存，所以可以高效获取。每个Asset都有自己的AssetDependencyHash，Reimport的时候重新计算。这里判断文件是否修改的依据是文件最后修改时间是否发生变化。获取目录下所有文件信息由于有操作系统文件系统做了索引是非常高效的。</p>
+<p>由于Refresh是一个必要项，这项开销已经花费出去了，所以这里可以直接享受接口的高效率。</p>
+<p>最后只要把每次的数据保存在本地，下次使用的时候先从本地加载，即可使这部分逻辑时间优化到2800ms左右，优化了近100倍，这里的执行效率已经非常优异了，主要开销在GetFiles上。</p>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>上面只讨论了有缓存数据情况下的优化情况，但实际缓存数据的加载和保存时间却被忽略了。实际结果是这部分的数据量较大，加载和保存开销也比较大，如果使用Json来存储的话，这里大概要花费1.5mins来读写这数据。</p>
+<p>这里讨论下对这个数据存储效率的优化，首先来看看数据结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class DepenData</span><br><span class="line">&#123;</span><br><span class="line">    public string assetPath;</span><br><span class="line">    public Hash128 assetDependencyHash;</span><br><span class="line">    public string[] dependsPath;</span><br><span class="line">&#125;</span><br><span class="line">// save data</span><br><span class="line">Dictionary&lt;string, DependData&gt; m_data;</span><br></pre></td></tr></table></figure>
+<p>基本都是字符串数据，存储出来的文件都有300M左右（大概，具体忘了），把Json存储改为二进制以后，文件大小缩减为75M左右，加载时间从1.5mins变成了18.3S。较大的改进，不过还可以在改进我想。</p>
+<p>这里依赖数据是递归即 A依赖B，B依赖C，在A的DependData里面就会有ABC，而B的依赖数据里面有BC。这里可以发现BC出现了两次，如果能把消除重复字符串，则可以近一步较少文件大小，提高读写速度。</p>
+<p>修改后的结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class DepenData</span><br><span class="line">&#123;</span><br><span class="line">    public int assetPathIndex;</span><br><span class="line">    public Hash128 assetDependencyHash;</span><br><span class="line">    public int[] dependsPathIndex;</span><br><span class="line">    public string[] dependsPath; // 用于返回查询结果，不保存</span><br><span class="line">&#125;</span><br><span class="line">// save data</span><br><span class="line">Dictionary&lt;string, DependData&gt; m_data;</span><br><span class="line">List&lt;string&gt; m_strList;</span><br><span class="line">// temp data</span><br><span class="line">Dictionary&lt;string, int&gt; m_strIndex;</span><br></pre></td></tr></table></figure></p>
+<p>改进后文件大小变为28M，加载时间从18.3S优化到3.3S。6倍的改进，挺棒的，这时候又在思考是否有改进的余地。</p>
+<p>第一个改进，把FileStream改为MemoryStream，数据则通过File.ReadAllBytes()读取。这个改造可以把3.3S改进为3S，主要是由于FileStream API调用的效率并不高，这里是通过减少调用频率来改进效率。对于FileStream每次ReadByte(2)和每次ReadByte(1024)，可能有接近100倍的性能差异。</p>
+<p>第二个改进，分析发现3S里面BinaryReader占用了2.7S，剩下数据结构组织，填充Dictionary占用了0.3S。C#的BinaryReader实现并不高效，可以通过更高效的序列化数据方式来优化。这里尝试使用了FlatBuffers来替换BinaryReader，保存的开销从880ms增长到1200ms，读取的时间从3000ms优化到1200ms。又是一次大幅度的优化，虽然现在收益时间已经无关紧要了，不过实践和验证想法也是不错的收获。这里开启FlatBuffers Unsafe模式应该会有更高的收益，接近C++的性能，如果直接用C++写性能果然会好很多吧。</p>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>Unity所有路径都是Assets开头，大量路径字符串里面前缀包含重复数据，数据结构还可以再改进……</p>
+<p>把二进制文件压缩后从28M变成5M，确实很多冗余数据，不过再改进可能付出太多时间而受益太低。这次的优化就到此为止了嘛。</p>
+<p>这里上最后一个优化思路<strong>异步化</strong>。</p>
+<p>异步加载在游戏中是很常见的做法，所以这里其实再实现两个异步化接口即可把这部分时间优化为0，由于还有其他很多任务可以并行执行，所以这部分时间在调整到适当的时机后可以忽略不计。</p>
+<p>由于Unity的接口不能在多线程调用，所以一开始就不会往这个方面思考，后面问题转化后异步是一个非常优异的做法，FlatBuffers的改造非常繁琐，浪费了我大量测试时间。最后我把代码回滚到二进制版本，FlatBuffers在运行时确实能带来巨大的效率提升，不过这里可能并不需要上这个利器了。</p>
+<p>一、二的优化是基于专注性思维的思考结果，而三则是发散性思维的思考结果。专注性思维容易陷入思维定式，这时候可以起来喝杯茶，出去散散步。</p>
+<p>[完 Carber 2018-08-12]</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/carbers" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Carber Lee<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
