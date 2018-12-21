@@ -1,334 +1,933 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
-<head><meta name="generator" content="Hexo 3.8.0">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
+<html lang="">
+  <head><meta name="generator" content="Hexo 3.8.0">
     
-        <meta name="description" content="now-is-life">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="now-is-life">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Carber's Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.10.1">
+
+
+
+<link rel="canonical" href="http://carbers.github.io/">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.10.1">
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title> Carber's Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Carber's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
     
-
-    <!--Author-->
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
     
-        <meta name="author" content="Carber Lee">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Carber&#39;s Blog">
-    
-
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="now-is-life">
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Carber&#39;s Blog">
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website">
-    
-
-    <!--Page Cover-->
-    
-
-        <meta name="twitter:card" content="summary">
-    
-
-    <!-- Title -->
-    
-    <title>Carber&#39;s Blog</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Google Analytics -->
-    
-
-
-    <!-- favicon -->
-    
-	
-</head>
-
-
-<body>
-
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Now-Is-Life</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">
-                            
-                                Home
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/tags">
-                            
-                                Tags
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://github.com/carbers">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+  </ul>
 </nav>
 
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Carber's Blog</h1>
-                    <hr class="small">
-                    <span class="subheading">勇气会带来天赋、能力和神奇的际遇</span>
-                </div>
-            </div>
-        </div>
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Carber's Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <section id="posts" class="posts">
+    
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/08/11/Unity中资源依赖关系获取效率优化/">Unity中资源依赖关系获取效率优化</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-08-11
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>今天和大家分享一个优化经验，主要关于获取一个资源的依赖资源列表即对AssetDatabase.GetDependencies这个接口的调用效率优化。通过一步步优化最后在对工程中所有资源获取依赖资源的执行上提升了近100倍的效率。</p>
+<p>在对AssetBundle进行打包时候，需要获取资源的依赖关系，并生成最后所有资源的BundleName。这里主要的瓶颈就是对资源的依赖关系数据获取上。在工程实践中发现整个构建环节20分钟，16分钟是BuildAssetBundles开销，3分钟是GetDependencies开销。在增量构建中，BuildAssetBundles可降为1-3分钟，而GetDependencies则仍需要3分钟开销。当然对于资源数量较小的工程，这个优化就是一个可有可无的选项对构建速度影响不大。</p>
+<p>还有一个常见的应用场景就是快速查找资源资源的依赖数据以及被依赖数据，也可以通过这次的优化带来体验上提升。</p>
+<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>首先从分析AssetDatabase.GetDependencies这个接口的行为开始，简单的编写一个测试函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void Test()</span><br><span class="line">&#123;</span><br><span class="line">    long timeStamp = Stopwatch.GetTimestamp();</span><br><span class="line">    string[] dir = Directory.GetFiles(&quot;Assets/&quot;, &quot;*.*&quot;, SearchOption.AllDirectories);</span><br><span class="line">    for (int i = 0; i &lt; dir.Length; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (dir[i].EndsWith(&quot;.meta&quot;, System.StringComparison.OrdinalIgnoreCase))</span><br><span class="line">        &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        AssetDatabase.GetDependencies(dir[i], true);</span><br><span class="line">    &#125;</span><br><span class="line">    UnityEngine.Debug.LogFormat(</span><br><span class="line">        &quot;GetDependencies cost &#123;0&#125; ms.&quot;, </span><br><span class="line">        (Stopwatch.GetTimestamp() - timeStamp) * 1000 / Stopwatch.Frequency</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过执行这个函数可以了解这个函数的开销，以及获得数据为之后的优化做对比。</p>
+<p>第一次执行的时候较慢，有较高的硬盘读写，总共花费6.3mins。</p>
+<p>第二次执行的时候快了近一倍，基本无硬盘读写，总共花费3.2mins。</p>
+<p>这里硬盘是使用SSD，如果使用机械键盘则这里性能堪忧，第二次基本所有内容都进了内存，操作系统做了缓存，所以快了很多。所以换更好的硬盘可以提高这里的效率，不过现在的执行时间还是太长了。</p>
+<p>如果对所有的资源进行扫描通过GUID去查询并获取依赖关系，那应该不止这么点时间。这里猜测Unity做过一些数据预处理与缓存来优化这个接口效率。</p>
+<p>这时候第一个优化思路是Cache，通过缓存每次结果下次查询时可以立即返回结果。不过由于资源会修改，依赖文件会发生变化，所以缓存可能会出错。如果不能判断当前缓存是否有效，则只能在确保资源部修改的情况下使用缓存数据。</p>
+<p>这里使用<strong>AssetDatabase.GetAssetDependencyHash</strong>来验证缓存是否有效，这个接口返回Asset的一个Hash值（包括文件名以及meta文件），如果Hash值不变，我们可以认为这个Asset直接依赖的资源文件不变，由于直接依赖是通过Asset文件内部的GUID索引的，所以Hash不变即表示GUID不变，即依赖关系不变。这里缓存Hash值以及这个Asset的直接依赖。通过所有的直接依赖，可以快速的计算出这个Asset的全部依赖。</p>
+<p>AssetDatabase.GetAssetDependencyHash接口非常高效，这里简单讨论下。</p>
+<p>这部分数据在Import Asset的时候计算并缓存，所以可以高效获取。每个Asset都有自己的AssetDependencyHash，Reimport的时候重新计算。这里判断文件是否修改的依据是文件最后修改时间是否发生变化。获取目录下所有文件信息由于有操作系统文件系统做了索引是非常高效的。</p>
+<p>由于Refresh是一个必要项，这项开销已经花费出去了，所以这里可以直接享受接口的高效率。</p>
+<p>最后只要把每次的数据保存在本地，下次使用的时候先从本地加载，即可使这部分逻辑时间优化到2800ms左右，优化了近100倍，这里的执行效率已经非常优异了，主要开销在GetFiles上。</p>
+<h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>上面只讨论了有缓存数据情况下的优化情况，但实际缓存数据的加载和保存时间却被忽略了。实际结果是这部分的数据量较大，加载和保存开销也比较大，如果使用Json来存储的话，这里大概要花费1.5mins来读写这数据。</p>
+<p>这里讨论下对这个数据存储效率的优化，首先来看看数据结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class DepenData</span><br><span class="line">&#123;</span><br><span class="line">    public string assetPath;</span><br><span class="line">    public Hash128 assetDependencyHash;</span><br><span class="line">    public string[] dependsPath;</span><br><span class="line">&#125;</span><br><span class="line">// save data</span><br><span class="line">Dictionary&lt;string, DependData&gt; m_data;</span><br></pre></td></tr></table></figure>
+<p>基本都是字符串数据，存储出来的文件都有300M左右（大概，具体忘了），把Json存储改为二进制以后，文件大小缩减为75M左右，加载时间从1.5mins变成了18.3S。较大的改进，不过还可以在改进我想。</p>
+<p>这里依赖数据是递归即 A依赖B，B依赖C，在A的DependData里面就会有ABC，而B的依赖数据里面有BC。这里可以发现BC出现了两次，如果能把消除重复字符串，则可以近一步较少文件大小，提高读写速度。</p>
+<p>修改后的结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class DepenData</span><br><span class="line">&#123;</span><br><span class="line">    public int assetPathIndex;</span><br><span class="line">    public Hash128 assetDependencyHash;</span><br><span class="line">    public int[] dependsPathIndex;</span><br><span class="line">    public string[] dependsPath; // 用于返回查询结果，不保存</span><br><span class="line">&#125;</span><br><span class="line">// save data</span><br><span class="line">Dictionary&lt;string, DependData&gt; m_data;</span><br><span class="line">List&lt;string&gt; m_strList;</span><br><span class="line">// temp data</span><br><span class="line">Dictionary&lt;string, int&gt; m_strIndex;</span><br></pre></td></tr></table></figure></p>
+<p>改进后文件大小变为28M，加载时间从18.3S优化到3.3S。6倍的改进，挺棒的，这时候又在思考是否有改进的余地。</p>
+<p>第一个改进，把FileStream改为MemoryStream，数据则通过File.ReadAllBytes()读取。这个改造可以把3.3S改进为3S，主要是由于FileStream API调用的效率并不高，这里是通过减少调用频率来改进效率。对于FileStream每次ReadByte(2)和每次ReadByte(1024)，可能有接近100倍的性能差异。</p>
+<p>第二个改进，分析发现3S里面BinaryReader占用了2.7S，剩下数据结构组织，填充Dictionary占用了0.3S。C#的BinaryReader实现并不高效，可以通过更高效的序列化数据方式来优化。这里尝试使用了FlatBuffers来替换BinaryReader，保存的开销从880ms增长到1200ms，读取的时间从3000ms优化到1200ms。又是一次大幅度的优化，虽然现在收益时间已经无关紧要了，不过实践和验证想法也是不错的收获。这里开启FlatBuffers Unsafe模式应该会有更高的收益，接近C++的性能，如果直接用C++写性能果然会好很多吧。</p>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>Unity所有路径都是Assets开头，大量路径字符串里面前缀包含重复数据，数据结构还可以再改进……</p>
+<p>把二进制文件压缩后从28M变成5M，确实很多冗余数据，不过再改进可能付出太多时间而受益太低。这次的优化就到此为止了嘛。</p>
+<p>这里上最后一个优化思路<strong>异步化</strong>。</p>
+<p>异步加载在游戏中是很常见的做法，所以这里其实再实现两个异步化接口即可把这部分时间优化为0，由于还有其他很多任务可以并行执行，所以这部分时间在调整到适当的时机后可以忽略不计。</p>
+<p>由于Unity的接口不能在多线程调用，所以一开始就不会往这个方面思考，后面问题转化后异步是一个非常优异的做法，FlatBuffers的改造非常繁琐，浪费了我大量测试时间。最后我把代码回滚到二进制版本，FlatBuffers在运行时确实能带来巨大的效率提升，不过这里可能并不需要上这个利器了。</p>
+<p>一、二的优化是基于专注性思维的思考结果，而三则是发散性思维的思考结果。专注性思维容易陷入思维定式，这时候可以起来喝杯茶，出去散散步。</p>
+<p>[完 Carber 2018-08-12]</p>
+
+        
+      
     </div>
-</header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2018/08/11/Unity中资源依赖关系获取效率优化/">
-        <h2 class="post-title">
-            Unity中资源依赖关系获取效率优化
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-08-11
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/05/06/AssetBundle增量打包/">
-        <h2 class="post-title">
-            AssetBundle增量打包
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-05-06
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/03/28/ECS与游戏开发/">
-        <h2 class="post-title">
-            ECS与游戏开发
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-03-28
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/08/11/C-Sharp内存与性能优化/">
-        <h2 class="post-title">
-            C-Sharp内存与性能优化
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-08-11
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/08/04/Unity项目中的资源管理（续）/">
-        <h2 class="post-title">
-            Unity项目中资源管理（续）
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-08-04
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/07/13/一个灵活的AssetBundle打包工具/">
-        <h2 class="post-title">
-            一个灵活的AssetBundle打包工具
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-07-13
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2017/07/09/Unity项目中的资源管理/">
-        <h2 class="post-title">
-            Unity项目中的资源管理
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2017-07-09
-    </p>
-</div>
-<hr>
-            
+    
 
-            <ul class="pager">
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/05/06/AssetBundle增量打包/">AssetBundle增量打包</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-06
+        </span>
+        
+        
+      </div>
+    </header>
+
     
     
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>最近在给项目做增量打包的功能，之前也有其他项目碰到增量打包差异过大的问题。</p>
+<p>这里记录分享下做法与思考过程，主要解决以下两个问题：</p>
+<ul>
+<li>增量包的一致性</li>
+<li>打包的时间优化</li>
 </ul>
-        </div>
+<p>首先AssetBundle打包可以概括把给定的资源打成一个或多个AssetBundle。每个AssetBundle包含一个或多个资源，AssetBundle之间存在依赖关系，具体的打包规则应该是每个项目根据资源进行配置的。</p>
+<p>第一次全包，相当于给所有的资源文件分配归属AB。第二次增量打包，不仅要对新增的文件分配归属AB，还要把已经删除的文件从AB里面移除，最后确定修改的AB文件列表。Unity 5.0以后的AB打包接口已经支持增量打包，直接使用就可以了。</p>
+<h4 id="增量包的一致性"><a href="#增量包的一致性" class="headerlink" title="增量包的一致性"></a>增量包的一致性</h4><p>增量包一致性是指我们在不修改任何资源的情况下，增量包与首包的一致性。正常的情况下如果不修改任何资源，两次打包出来的包应该保持一致。然而由于项目做了较多的预处理，最后发现差异非常大。</p>
+<p>通过分析打包日志，发现项目在打包之前的预处理环节处理的资源不能保持一致性。包括CreateAsset，CreatePrefab，ReplacePrefab，SaveScene等行为。对于新创建的资源，由于guid发生变化会导致增量包不一致。对于Prefab和Scene资源，则是尽管Object并没有发生变化，但是Object与Object之间的顺序会发生变化，这也会导致增量包不一致。</p>
+<p><strong>最后问题就变成了解决预处理环节资源的一致性问题。</strong></p>
+<p>如果把所有预处理修改的资源都提交入库，这样应该就可以解决增量包一致性的问题了。但并不是所有的资源都能这样直接入库，而且自动化环节变手工环节还会有一些其他问题。<strong>这里把修改后资源提交到一个其他库就避免了冲突问题。</strong></p>
+<p>然后修改预处理环节的逻辑为，如果资源修改了重新执行，如果资源无修改则直接拷贝库里文件。对于meta文件，则应该不过是否重新生成，都要复用避免guid不一致的问题。再设计一个全局开关来控制新的增量逻辑，如果预处理规则修改了，则可以全部重新生成。正常已经上线是不允许做这样大的改动，不过日常开发过程中修改预处理规则是很常见的，所以需要支持。</p>
+<p>修改的资源相当于复制了一份，为了避免重新生成guid，这些资源应该放在Assets目录之外，对于生成出来的资源则没有这方面的限制。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3503018-06f7383ca20866f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自于网络"></p>
+<h4 id="打包的时间优化"><a href="#打包的时间优化" class="headerlink" title="打包的时间优化"></a>打包的时间优化</h4><p>在做完第一步，保持了原始资源的一致性后，增量打包这个事情可以算搞定了。由于资源没有发生变化，所以即使把所有资源都重新打一次包最后的结果也是一样的。不过既然是做增量打包，我们还是要考虑到整包的构建时间过长。所以这里要解决的问题就是打包时间优化。</p>
+<p>首先，这里还是包含了两个环节，一个是资源预处理，另外个是资源打包。前面已经讨论过为了资源一致性，我们需要把资源保存下来，没有修改的资源不需要重新生成。这里为节省打包时间，其实做出了巨大贡献。在剖析打包时间的时候，发现ReplacePrefab，SaveScene这些Unity API调用占用了大量的时间。这里并没有多少办法可以优化这些API调用的时间，一个显而易见的好办法就是少调用几次。</p>
+<p>对于如何获取修改的资源文件列表，可以通过svn，git等版本控制软件获取。在得到了文件修改列表之后，我们也知道了预处理环节中哪些资源是可以复用的，哪些资源是需要重新执行预处理的。在后面的打包环节也同样是利用这个资源差异列表来做增量。</p>
+<p>打包环节的增量就是确定哪些包需要打，这里是根据差异列表计算出哪些AB需要打包。由于AB之间会有依赖关系，所以要递归算出最后需要打包的AB列表。然后根据AB打包列表按打包规则顺序进行打包即可。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>资源一致性这个问题可能是大部分项目打包过程中会碰到的，因为Unity没有解决这个问题。这里通过自己保存资源以及维护资源修改列表来解决这个问题。顺便这个做法还能节省很多的构建时间，做增量预处理，一举两得。</p>
+<p>其实是在思考过程中突然意识到其实是要做这样一件事情，想到后整个事情并不复杂。</p>
+
+        
+      
     </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2018/03/28/ECS与游戏开发/">ECS与游戏开发</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-03-28
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>Entity-component-system(ECS)是一个gameplay框架，主要定义了一个模型来解决更新问题。ECS系统遵守组合优于继承原则，通过动态添加删除Component改变Entity的行为。System定义了一个全局的更新函数，它遍历相应Component组合并执行Update函数。Entity对应于传统的GameObject，不过在ECS里面Entity只是一个ID，用于标识对象以及管理对象生命周期。Component定义和持有数据，可以认为这里Component持有之前的GameObject上的部分特定数据，通常我们把可以共用的数据单独定义成一个Component。</p>
+<p>想象一下在一个MMO游戏中，我们有Player,Npc,Doodad,Pet等等。我们面对的对象种类非常少，但每个种类的行为又非常多与复杂。我们不需要定义Cat,Dog,Dragon继承Pet。我们有一个Pet能文会武，无所不能。然后我们的Pet可以采集Doodad，与Player交互，与Npc战斗。这里可以发现按传统的OO定义对象并没有带来多少便利性，最后所有的对象都趋向于变成Monster。可以发现传统的OO对于这样的MMO游戏是不适用的。ECS却是一种非常适合框架，对于任何一个行为，我们只需要获取想要的数据（Component组合），并执行相应的更新函数即可。</p>
+<p>当然真实的游戏情况是复杂的，事物也并非是孤立的。区别于传统的EC架构，ECS中的System约定了一种全局Update方式，这带来较大的便利性。大部分情况下System只需要关心自身Component组合的行为，而不需要关心其他System。对于有交互的一些复杂行为，则可能需要明确下部分System之间的顺序。由于System是一个独立的全局行为，所以相对较好理解的。我们知道System的行为，自然也知道了相关联的System执行时序。这里还有一个难以解决的问题，就是存在部分行为需要两个System进行交互。如果通过在Component增加Flag的方式，然后交互的System读取Component上的Flag并进行检查每帧。这看起来是非常低效与繁琐的。一个比较好的解决方案是观察者模式，每个System支持一套Event机制，一般来说每个Event只执行一次。最后讨论下共享行为，存在一些类似的行为在不同的System里面，这里把这些行为抽离为全局Utility函数。如果在多处调用一个Utility,那么这个函数就应该依赖很少的组件，而且不应该带副作用或者很少的副作用。如果你的Utility函数依赖很多组件，那就试着限制调用点的数量。</p>
+<p>使用ECS意味着需要思考如何用ECS解决问题，区别于OO的偏人性化的思维模式。可能会有一些不习惯，不过尝试学习这种思维模式本身就是一件很有意思的事情不是么？上面讨论了ECS以及一些ECS实现的细节，但是为什么要使用ECS呢？我觉的主要原因是ECS解决复杂问题的能力，对于一个高复杂度的问题，如果代码中耦合其他不需要的信息，将极大的提高编码与维护成本。ECS是一个不错的框架，不过前提是需要遵守一些约定，同时也并不是所有的事情都适合ECS来做。不过ECS有本身具有极高的兼容性，可以与其他系统共存。本身一个好的完整的游戏也应该是由多个架构构成，单一的架构都存在自身的优势与劣势。</p>
+<p>最后再谈谈ECS的优势，ECS是一个近乎完美的解决方案，可以大规模的提升大部分MMO游戏的开发效率。而且近乎无限制去实现游戏逻辑，很多时候在现有的结构下面我们很难去满足一些策划的需求，ECS在这里有天然的优势。要知道一个MMO游戏上线只是开始，后续的快速迭代开发是常态，能否快速迭代开发也很大程度上决定了一个游戏的成功与失败。然后就是性能问题，性能问题容易变成主要问题，而且就算性能不是问题，如果性能足够高的话，我们可以做更多更复杂更有意思的行为。这里内存Cache Miss是主要原因，内存的性能和CPU差太远，这几乎是大部分游戏会碰到的问题。ECS类似于面向流编程，具有较好的内存友好性。ECS解决了内存管理与生命周期管理并且多线程友好，当然这些对于优秀的游戏开发者来说不是问题，但是如果所有的开发过程中都要考虑这么多问题是低效的，而且当团队有20多个程序员的时候，并不能要求没有人的代码都具有这些特征。</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/08/11/C-Sharp内存与性能优化/">C-Sharp内存与性能优化</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-08-11
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>前两周分享了资源配置与资源管理，今天分享一种特殊的资源脚本数据。在Unity项目中，我们通常使用C#编写脚本，所以主要谈C#内存与性能优化。</p>
+<blockquote>
+<p>一切都（代码）应该尽可能简单，但不能过于简单。</p>
+</blockquote>
+<h4 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h4><p>首先要关注String，String没有看起来那么简单，那么String是什么呢？</p>
+<ul>
+<li>String是一个UTF-16编码的文本</li>
+<li>String是一个引用类型</li>
+<li>String是不可变的</li>
+</ul>
+<p>在C#里面，字符串是一个引用类型而不是一个值类型，即使看起来像是持有一个值类型对象并可以方便的修改。这里修改字符串会创建一个新的字符串，通常建议使用StringBuild来拼接字符串，下面看看不同行为的拼接字符串带来的性能差异。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class MonoTest : MonoBehaviour &#123;</span><br><span class="line">    const int SIZE = 1024;</span><br><span class="line">	void Update () &#123;</span><br><span class="line">        _UpdateStringAppend();</span><br><span class="line">        _UpdateStringFormat();</span><br><span class="line">        _UpdateStringBuild();</span><br><span class="line">	&#125;</span><br><span class="line">    string _UpdateStringAppend() &#123;</span><br><span class="line">        string str = string.Empty;</span><br><span class="line">        for (int i = 0; i &lt; SIZE; ++i) &#123;</span><br><span class="line">            str += i;</span><br><span class="line">        &#125;</span><br><span class="line">        return str;</span><br><span class="line">    &#125;</span><br><span class="line">    string _UpdateStringFormat() &#123;</span><br><span class="line">        string str = string.Empty;</span><br><span class="line">        for (int i = 0; i &lt; SIZE; ++i) &#123;</span><br><span class="line">            str += string.Format(&quot;&#123;0&#125;&quot;, i);</span><br><span class="line">        &#125;</span><br><span class="line">        return str;</span><br><span class="line">    &#125;</span><br><span class="line">    string _UpdateStringBuild() &#123;</span><br><span class="line">        StringBuilder strBuilder = new StringBuilder();</span><br><span class="line">        for (int i = 0; i &lt; SIZE; ++i) &#123;</span><br><span class="line">            strBuilder.Append(i);</span><br><span class="line">        &#125;</span><br><span class="line">        return strBuilder.ToString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Time ms</th>
+<th>GC Alloc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StringAppend</td>
+<td>9.09ms</td>
+<td>2.9M</td>
+</tr>
+<tr>
+<td>StringFormat</td>
+<td>20.97ms</td>
+<td>3.0M</td>
+</tr>
+<tr>
+<td>StringBuilder</td>
+<td>4.76ms</td>
+<td>48.0KB</td>
+</tr>
+</tbody>
+</table>
+<p>观察数据可以发现StringBuilder在性能上和GC上都有极大的提升。Appendc操作每次创建一个新的字符串，字符串长度从0增长到n，这是一个O(n^2)的操作。而StringBuilder则只会在长度不够的时做一次O(n)的Resize操作，如果内部的长度是按2递增的话，这里的复杂度是O(nlogn)。开始时就设定一个足够大的初始值，则这里的复杂度可以降低到O(n)。</p>
+<p>这里的内存申请的量级和运算复杂度也是一样的，关注大小与分配次数。过多的分配次数会导致堆碎片变多，过多的内存分配则会导致触发内存清理，这些额外的开销都是可以避免。推荐尽可能的使用StringBuild来优化这个操作，然后StringBuild本身也是可以复用的。</p>
+<p>再来看看之前讨论里面被忽略的Format拼接，Format表现最差有点出人意外又在情理之中。我们在平时被建议使用Format来拼接字符串，但在有些情况下Format的表现非常差。这里就是一个不恰当的Format使用案例，这是一个冗余的Format操作，多了一次int转object的GC。如果还难以理解，则可以看看下面的Format操作，这里得到了一个更差的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">string _UpdateStringFormatEx() &#123;</span><br><span class="line">    string str = string.Empty;</span><br><span class="line">    for (int i = 0; i &lt; SIZE; ++i) &#123;</span><br><span class="line">        str = string.Format(&quot;&#123;0&#125;&#123;1&#125;&quot;, str, i);</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>Func</th>
+<th>Time ms</th>
+<th>GC Alloc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StringAppend</td>
+<td>9.09ms</td>
+<td>2.9M</td>
+</tr>
+<tr>
+<td>StringFormat</td>
+<td>20.97ms</td>
+<td>3.0M</td>
+</tr>
+<tr>
+<td>StringBuilder</td>
+<td>4.76ms</td>
+<td>48.0KB</td>
+</tr>
+<tr>
+<td>StringFormatEx</td>
+<td>40.13ms</td>
+<td>8.6M</td>
+</tr>
+</tbody>
+</table>
+<p>正确的Format用法是下面这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string str = string.Format(&quot;&#123;0&#125;&#123;1&#125;....&#123;n&#125;&quot;, 0, 1, ..., n);</span><br></pre></td></tr></table></figure></p>
+<p>通过把多次拼接操作合并成一次来达到减少GC提高效率，实际Format的内部使用了StringBuild来拼接字符串。N次使用StringBuild来拼接字符串的性能与1次的操作性能有较大差异，这也是平时使用中需要注意的。</p>
+<h4 id="优化字符串数量"><a href="#优化字符串数量" class="headerlink" title="优化字符串数量"></a>优化字符串数量</h4><p>字符串是不可变，每次修改字符串都会生成一个新的字符串，那创建的字符串呢？经过实验了解到每次创建字符串都会得到一个新串，即使已经存在一个相同的字符串。这里有一篇顾露分享的<a href="https://zhuanlan.zhihu.com/p/23877335" target="_blank" rel="noopener">《Unity 游戏的 string interning 优化》</a>已经做了这块内容详细描述。<strong>对于不可变的相同对象，完全是可以复用的，</strong>这里通过string.Intern来完成这个操作。减少字符串数量达到优化内存的效果，同时让我发现了项目中存在着大量的字符串使用。如何更进一步的减少字符串数量是个有趣的问题。</p>
+<p>通过顾露的自制工具<a href="https://github.com/PerfAssist/PA_ResourceTracker" target="_blank" rel="noopener">PA_ResourceTracker</a>采集的数据，分析数据发现字符串数据里面存在较多的资源加载路径。这些路径数据非常的长，而且数量也非常的多。字符串路径的作用是标识资源，考虑使用Hash来标识资源也可以做到相同的事情。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Resources.Load(string path, Type type);</span><br><span class="line"></span><br><span class="line">Resources.Load(ulong pathHash, Type type);</span><br><span class="line">Resources.PathToHash(string path);</span><br></pre></td></tr></table></figure></p>
+<p>在资源管理上实现两个新增的接口，支持按Hash加载资源，然后提供一个字符串路径转Hash的接口，来实现这一目标。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Template</span><br><span class="line">&#123;</span><br><span class="line">   public int id = -1;</span><br><span class="line">   public string name;</span><br><span class="line">   public string path;</span><br><span class="line">&#125;</span><br><span class="line">public class Template</span><br><span class="line">&#123;</span><br><span class="line">   public int id = -1;</span><br><span class="line">   public string name;</span><br><span class="line">   public ulong pathHash;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后替换结构体里面的变量为Hash，在第一次得到这个字符串后立刻调用Resources.PathToHash计算Hash值并存储。</p>
+<p>计算路径的Hash还需要考虑路径的大小写、斜杠与放斜杠。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public ulong PathToHash(string str) &#123;</span><br><span class="line">    ulong hashCode = 0;</span><br><span class="line">    for (int i = 0; i &lt; str.Length; ++i) &#123;</span><br><span class="line">        char ch = Char.ToUpperInvariant(str[i]);</span><br><span class="line">        if (str[i] == &apos;\\&apos;)  &#123; ch = &apos;/&apos;; &#125;</span><br><span class="line">        hashCode = (hashCode &lt;&lt; 7) + (hashCode &lt;&lt; 1) + hashCode + ch;</span><br><span class="line">    &#125;</span><br><span class="line">    return hashCode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用ulong降低Hash的冲突，由于存在冲突的可能，这里在日常构建的时候对所有的资源路径计算Hash判断是否有冲突。这里路径Hash不仅减少了对象数量，也减少了一些字符串修改操作导致的GC。下面举个降低的例子，获取唯一字符串路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public string GetUniString(string str) &#123;</span><br><span class="line">    return str.Replace(&apos;\\&apos;, &apos;/&apos;).ToUpperInvariant();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这实在是一个低效的行为，所以即使你不需要缩减字符串个数，还是强烈推荐使用Hash来做唯一标识符。</p>
+<p>由于Unity提供的Resources接口需要使用路径字符串来加载资源，所以之前说了那么多还没有解释为什么可以减少字符串对象这个问题。这里我们项目能使用主要是由于使用了AssetBundle。只需要先存Hash对应的AssetBundle ID然后加载这个AssetBundle的时候加载Hash对应Name即可。</p>
+<p>AssetBundle支持直接使用Name加载，也可以使用Asset Path加载。这里的AssetPath是相对于Assets目录的路径与Resources的相对于Resources目录还是有差异的，所以使用Name来加载。AssetBundle本身就有一个接口AssetBundle.GetAllAssetNames()获取所有资源路径。不过这里会包含被依赖的所有资源路径，所以一般自己存这个数据。</p>
+<p>细心的人也注意到了上面提到的AssetBundle ID，由于AssetBundle打包是可以完全控制的。所以给AssetBundle命名一个数字ID，也是有效的减少字符串数量的方法。这对使用AssetBundle打包加载资源的项目是一个不错的参考。我们实现自己的AssetBundleManifest维护AssetBundle之间的依赖关系。</p>
+<p>Unity的Animator类提供了StringToHash接口来帮助消除字符串，同时配套提供两套接口可以调用，和这里消除字符串路径的思路是一致的。相信还有其他地方也可以通过这个思路来消除字符串优化性能。</p>
+<p>最后这里做字符串转路径这个实现是由于游戏在开始的时候就加载了大部分配置表，表现表里面有着大量路径字符串。在工具里面发现路径字符串的比重大概在20%，所以做这项工作优化字符串数量的工作，并带来了不错的性能收益。在Debug版本可以保留字符串实际路径便于差错。</p>
+<h4 id="优化字符串比较"><a href="#优化字符串比较" class="headerlink" title="优化字符串比较"></a>优化字符串比较</h4><p>默认的字符串比较操作是非常低效的，<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings" target="_blank" rel="noopener">《Best Practices for Using Strings in .NET》</a>这篇文章讲了这方面的大部分细节。这里主要展示一些测试数据，让我们对性能有一个认识。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sBuilder = new StringBuilder();</span><br><span class="line">System.Random random = new System.Random();</span><br><span class="line">for (int i = 0; i &lt; 100; ++i)</span><br><span class="line">&#123;</span><br><span class="line">   sBuilder.Append((char)(random.Next() % 256));</span><br><span class="line">&#125;</span><br><span class="line">string str = sBuilder.ToString();</span><br><span class="line">string preStr = str.Substring(0, 16);</span><br><span class="line">string lastStr = str.Substring(str.Length - 16, 16);</span><br><span class="line">int cnt = 0;</span><br><span class="line">for (int i = 0; i &lt; 100 * 1024; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    if (str.StartsWith(preStr)) ++cnt;</span><br><span class="line">    if (str.EndsWith(lastStr)) ++cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试结果</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method</th>
+<th style="text-align:right">Time(ms) 100k compares</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">String.StartsWith,default culture</td>
+<td style="text-align:right">360ms</td>
+</tr>
+<tr>
+<td style="text-align:left">String.EndsWith,default culture</td>
+<td style="text-align:right">12465ms</td>
+</tr>
+<tr>
+<td style="text-align:left">String.StartsWith,Ordinal</td>
+<td style="text-align:right">357ms</td>
+</tr>
+<tr>
+<td style="text-align:left">String.EndsWith,Ordinal</td>
+<td style="text-align:right">174ms</td>
+</tr>
+<tr>
+<td style="text-align:left">CustomStartsWith</td>
+<td style="text-align:right">18ms</td>
+</tr>
+<tr>
+<td style="text-align:left">CustomEndsWith</td>
+<td style="text-align:right">17ms</td>
+</tr>
+</tbody>
+</table>
+<p>字符串比较接口默认行为<br>| Func Name| Default interpretation|<br>|:-|:-:|<br>|String.Compare|StringComparison.CurrentCulture|<br>|String.CompareTo|StringComparison.CurrentCulture|<br>|String.Equals|StringComparison.Ordinal|<br>|String.ToUpper|StringComparison.CurrentCulture|<br>|Char.ToUpper|StringComparison.CurrentCulture|<br>|String.StartsWith|StringComparison.CurrentCulture|<br>|String.IndexOf|StringComparison.CurrentCulture|<br>正常情况下使用Ordinal比较即可，自己实现Ordinal行为的比较还可以提高10倍的性能。</p>
+<h4 id="从容器谈Boxing"><a href="#从容器谈Boxing" class="headerlink" title="从容器谈Boxing"></a>从容器谈Boxing</h4><p>泛型容器内部实现会调用一些System.Object接口，如果我们不实现对应的泛型接口，在调用接口的时候就会找到基类Object的接口。而由于Struct是一个值类型，value type转class type会触发内存分配，定义这种行为为Boxing。<a href="http://www.somasim.com/blog/2015/08/c-performance-tips-for-unity-part-2-structs-and-enums/" target="_blank" rel="noopener">《c-performance-tips-for-unity-part-2-structs-and-enums》</a>这篇文章已经对这块做了详细描述与举例。我自己也做了一些数据测试，分享给大家做参考。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public struct SmallStruct</span><br><span class="line">&#123;   // 2 int fields. Total size: 2 * 4B + 16B = 24B</span><br><span class="line">    public int a, b;</span><br><span class="line">&#125;</span><br><span class="line">public struct LargeStruct</span><br><span class="line">&#123;   // 20 int fields. Total size: 20 * 4B + 16B = 96B</span><br><span class="line">    public int a, b,  /* … */;</span><br><span class="line">&#125;</span><br><span class="line">// Dictionary&lt;Struct, bool&gt; dict</span><br><span class="line">// 1024 calls dict. ContainsKey</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Struct</th>
+<th style="text-align:right">GC Alloc</th>
+<th style="text-align:right">Time ms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SmallStruct</td>
+<td style="text-align:right">72.0KB</td>
+<td style="text-align:right">2.50ms</td>
+</tr>
+<tr>
+<td style="text-align:left">LargeStruct</td>
+<td style="text-align:right">288.0KB</td>
+<td style="text-align:right">11.05ms</td>
+</tr>
+</tbody>
+</table>
+<p>实现了不同接口之后<br>|SmallStruct|GC Alloc|Time ms|<br>|:-|-:|-:|<br>|None|72.0KB|2.50ms|<br>|IEquatable&lt;&amp;T&gt;|24.0KB|1.77ms|<br>|GetHashCode|48.0KB|2.57ms|<br>|GetHashCode,IEquatable&lt;&amp;T&gt;|0.0KB|1.81ms|<br>观察发现Dictionary内部使用 EqualityComparer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public abstract class EqualityComparer&lt;T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    protected EqualityComparer();</span><br><span class="line">    public static EqualityComparer&lt;T&gt; Default &#123; get; &#125;</span><br><span class="line">    public abstract bool Equals(T x, T y);</span><br><span class="line">    public abstract int GetHashCode(T obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果没有实现GetHashCode触发一次boxing，而Equals则触发两次。实现IEquatable泛型接口，以及override int GetHashCode则可避免触发GC。非泛型的HashTable实现和泛型Dictionary基本一致，推荐使用Dictionary泛型版本，提高性能。</p>
+<p>GetHashCode的实现并不需要返回一个唯一结果，而是尽可能的减少冲突即可，在HashCode相同的情况下才会执行Equals比较。实现好的GetHashCode减少冲突，提高性能，更多内容可以参考<a href="https://stackoverflow.com/questions/371328/why-is-it-important-to-override-gethashcode-when-equals-method-is-overridden" target="_blank" rel="noopener">《Why is it important to override GetHashCode when Equals method is overridden?<br>》</a>。</p>
+<h4 id="其他Tips"><a href="#其他Tips" class="headerlink" title="其他Tips"></a>其他Tips</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void DispatchEvent(string str, params object[] data);</span><br><span class="line"></span><br><span class="line">static object[] _default = new object[] &#123;&#125;;</span><br><span class="line">void DispatchEvent(string str)  &#123;</span><br><span class="line">    _DispatchEvent(str, _default);</span><br><span class="line">&#125;![Alt text](./04.【1】磯村由纪子 - 风の住む街.jpg)</span><br><span class="line"></span><br><span class="line">void _DispatchEvent(string str, object[] data)；</span><br></pre></td></tr></table></figure>
+<p>params object每次调用会申请一个object数组，对于无参数的行为，实现一个默认接口减少GC。</p>
+<p>一般情况下使用Profile Windows排查不必要的GC Alloc。<br><img src="./1502416403334.png" alt="Profiler window"></p>
+<p>这个工具能帮助我们定位发生GC Alloc行为的代码，通常第一步优化那些每帧都存在的GC，之后优化那些峰值很高的GC。优化GC能带来什么好处呢，假设当前使用了30M内存，申请了50M内存。这里有20M的空间可以用于日常的GC Alloc。假设我们每帧的GC Alloc=100K，则20 * 1024 / 100 = 204帧。如果每帧的执行时间为33ms（30帧），则6.76S触发一次GC.Collect()。这个函数开销在100ms以上，当前帧的开销从33ms变成133ms，这会有明显的卡顿感。更多的GC优化可以参考<a href="https://unity3d.com/cn/learn/tutorials/temas/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069" target="_blank" rel="noopener">《Structing out code to minimize the impact of garbage collection》</a>。</p>
+<h4 id="从Struct再谈优化对象数量"><a href="#从Struct再谈优化对象数量" class="headerlink" title="从Struct再谈优化对象数量"></a>从Struct再谈优化对象数量</h4><p>从Rich Geldreich的<a href="http://www.gamasutra.com/blogs/RichGeldreich/20150731/250071/Lessons_Learned_While_Fixing_Memory_Leaks_in_our_First_Unity_Title.php" target="_blank" rel="noopener">《Lessons Learned While Fixing Memory Leaks in our First Unity Title》</a>了解到对象数量过大造成额外的内存使用。这里再次谈对象数量优化，优化内存使用。</p>
+<blockquote>
+<p>The Boehm collector grows its OS memory allocation so it has enough internal heap headroom to avoid collecting too frequently. You must factor this headroom into account when budgeting your C# memory, i.e. if your budget calls for 25MB of C# memory then the actual amount of memory consumed at the OS level will be significantly larger (approximately 40-50MB in our experience).</p>
+</blockquote>
+<p>这里主要讨论配置表，配置表一般是一种Key-Value结构，同时在运行时我们不需要修改内存，最后配置表的总量和数量会非常多。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Dicitonary&lt;TKey, TValue&gt; &#123; </span><br><span class="line">    private int[] m_buckets;</span><br><span class="line">    private int[] m_entryNext;</span><br><span class="line">    private int[] m_entryHash;</span><br><span class="line">    private TKey[] m_entryKey;</span><br><span class="line">    private TValue[] m_entryValue ;</span><br><span class="line">&#125;</span><br><span class="line">public class PlayerTemplate &#123;</span><br><span class="line">    public int id;</span><br><span class="line">    public ulong pathHash;</span><br><span class="line">    public float height;</span><br><span class="line">    /* ... more data */</span><br><span class="line">&#125; // assume size = 128B</span><br><span class="line">Dictionary&lt;int, PlayerTemplate&gt; dict;</span><br></pre></td></tr></table></figure></p>
+<p>一般使用Dictionary存储配置表数据，上面定义的配置表数据类型为class，则可以得到下面的数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Set PlayerTemplate Count = 5000;</span><br><span class="line">// 第一个大于Count * 2的素数</span><br><span class="line">Dictionary ArraySize = 10103; </span><br><span class="line"></span><br><span class="line">ObjectCount = 5000 + 5 + 1 = 5006;</span><br><span class="line">MemorySize = 5000 * 128B + 10103 * 24 = 882472B = 861.8KB</span><br></pre></td></tr></table></figure></p>
+<p>之后我们把class改struct<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public struct PlayerTemplate &#123;/* … */&#125;</span><br><span class="line"></span><br><span class="line">ObjectCount = 5 + 1 = 6;</span><br><span class="line">MemorySize = 10103 * 128B + 10103 * 16 = 1454832B = 1420.7KB</span><br></pre></td></tr></table></figure></p>
+<p>对象数量减少后的代价是内存使用的增长，下面来看怎么优化内存使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public interface ITableType&lt;TKey, TValue&gt; &#123;</span><br><span class="line">    TKey GetKey();</span><br><span class="line">&#125;</span><br><span class="line">public class TableOrderList&lt;Tkey, TValue&gt; &#123;</span><br><span class="line">    private bool m_sorted;</span><br><span class="line">    private TValue[] m_data;</span><br><span class="line">    private int m_size;</span><br><span class="line">&#125;</span><br><span class="line">public struct PlayerTemplate : ITableType&lt;int, PlayerTemplate&gt; &#123;</span><br><span class="line">    public int GetKey() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line">    public int id;</span><br><span class="line">    public ulong pathHash;</span><br><span class="line">    public float height;</span><br><span class="line">    /* ... more data */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>自定义容器与接口实现线性内存空间存储数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public int LowerBounder(TKey key) &#123;</span><br><span class="line">    int low = 0, high = m_size;</span><br><span class="line">    while (low &lt; high) &#123;</span><br><span class="line">        int mid = (low + high) &gt;&gt; 1;</span><br><span class="line">        if (m_list[mid].GetKey().CompareTo(key) &lt; 0) &#123;</span><br><span class="line">            low = mid + 1;</span><br><span class="line">        &#125; else &#123; </span><br><span class="line">            high = mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return low;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在数据加载结束后进行一次排序，之后就通过二分查找数据。</p>
+<p>最后的数据对比如下。<br>|Type|Object Count|Memory Use|Complexity|<br>|:-|-:|-:|:-:|<br>|Class,Dictionary|5006|861.8KB|O(1)|<br>|Struct,Dictionary|6|1420.7KB|O(1)|<br>|Struct,TableOrderList|1|625KB|O(logn)|<br>新实现的容器再对象数量与内存使用上都有着较大优势，由于一般游戏很难有超过1W以上的数据量，这里O(logn)与O(1)的差距较小可以接受，而且一般这里也不是性能瓶颈。</p>
+<p>Struct只能整存整取，Class则可以简易的修改成员变量。但是对于只读的数据来说，使用Struct来存储数据有极大的优势。更多Struct与Class的讨论可以参考<a href="http://stackoverflow.com/questions/13049/whats-the-difference-between-struct-and-class-in-net" target="_blank" rel="noopener">《What’s the difference between struct and class in .NET》</a>。</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/08/04/Unity项目中的资源管理（续）/">Unity项目中资源管理（续）</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-08-04
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>上次和大家分享了<a href="https://carbers.github.io/2017/07/09/Unity%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/">Unity项目中的资源管理</a>主要讲资源配置以及资源配置工具，Unity资源配置在资源管理中处于基础地位，影响资源的增长速率以及量级。通过合理的资源配置，可以承载更多的资源，丰富游戏的内容。今天主要分享运行时的资源管理，探讨如何妥善的管理资源以达到内存与性能兼顾。从资源介绍开始，分析加载接口与对象池设计，然后讨论资源内容分级，最后分享一款轻量级内存Profile工具。</p>
+<h4 id="内存与程序稳定性"><a href="#内存与程序稳定性" class="headerlink" title="内存与程序稳定性"></a>内存与程序稳定性</h4><p>iPhone 6&amp; iPhone 6P只有1G的内存，而这两个机型在iOS平台上的市场份额超过40%。如果使用超量的内存游戏将闪退，这会带来极差的游戏体验。想象在进行激烈的战斗的时候，由于加载了更多的特效和模型，游戏突然闪退了。或许游戏有一套不错的断线重连机制，你还能回到战场。但基本上来说你很难获得这场战斗的胜利，这一个非常差的游戏体验。</p>
+<p>同时在iPhone 6S以上的机型又有2G的内存可以使用，只要性能没有问题，完全可以承载更多的内容(资源)。在制作了过量了资源的情况下，如何妥善的管理资源是一个较大的挑战。一个项目一百多号人参与制作，如何协调工作，规整制作内容是一个头疼的问题。</p>
+<p><strong>合理的资源管理方案兼顾性能与内存，提供一个稳定流畅的游戏环境。</strong></p>
+<h3 id="Unity资源介绍"><a href="#Unity资源介绍" class="headerlink" title="Unity资源介绍"></a>Unity资源介绍</h3><p>在做资源管理之前，首先我们要对资源有足够的了解，这样可以方便展开之后的工作。Unity官方已经有一篇非常精彩的文章来介绍Unity资源<a href="https://unity3d.com/cn/learn/tutorials/temas/best-practices/assets-objects-and-serialization?playlist=30089" target="_blank" rel="noopener">《Assets, Objects and serialization》</a>。</p>
+<blockquote>
+<p>An Asset is a file on disk, stored in the Assets folder of a Unity project. For example, texture files, material files and FBX files are all Assets. Some Assets contain data in formats native to Unity, such as materials. Other Assets need to be processed into native formats, such as FBX files.</p>
+</blockquote>
+<blockquote>
+<p>A UnityEngine.Object, or Object with a capitalized ‘O’, is a set of serialized data collectively describing a specific instance of a resource. This can be any type of resource which the Unity Engine uses, such as a mesh, a sprite, an AudioClip or an AnimationClip. All Objects are subclasses of the UnityEngine.Object base class.</p>
+</blockquote>
+<p>Asset是指在Assets目录下的所有文件，在工程里面每个Asset会有一个对应的Meta文件，Meta文件用于描述Asset在工程里面的格式，之前分享的贴图配置也是通过修改Meta文件来达成。一个Asset包含一个或多个Object，这里的Obejct可以直接包含数据，也可以表示引用了其他Asset文件下的Object。</p>
+<p>GameObject是一个特殊类型的Obejct，通常我们通过把一系列的Assets组装成Prefab（GameObject）来制作资源，Unity通过依赖关系加载所有资源。在加载一个GameObject之后，我们通常需要实例化GameObject。大部分Asset资源是共用的，实例化过程中Unity并不会复制这些共用资源，而是复制那些可修改的不可复用的数据，比如MonoBehaviour上的数据。当然我们也可以直接加载Asset资源来使用，比如直接加载一张贴图，放在一个UI面板上展示。通过依赖加载的贴图和直接加载的贴图是同一份贴图，Unity内部帮我们解决了资源重复的问题，可以放心使用。</p>
+<h4 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h4><blockquote>
+<p>The Assets and Objects in all folders named “Resources” are combined into a single serialized file when a project is built.</p>
+</blockquote>
+<p>Resources目录下所有的资源，都会被打包且可以通过Resources接口加载，加载路径为Resources目录的相对路径。支持同步与异步两个加载接口，支持单对象的UnloadAsset，还有一个清理未被引用的资源的接口。这里UnloadAsset不能卸载GameObject和Component，而且是强制卸载，即使外部仍然在使用这个资源。UnloadUnusedAssets则是一个安全的接口，只清理那些不再被引用的资源，不过这个接口开销较大会引起卡顿。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static T Load&lt;T&gt;(string path) where T : Object;</span><br><span class="line">public static ResourceRequest LoadAsync&lt;T&gt;(string path) where T : Object;</span><br><span class="line">public static void UnloadAsset(Object assetToUnload);</span><br><span class="line">public static AsyncOperation UnloadUnusedAssets();</span><br></pre></td></tr></table></figure></p>
+<h4 id="AssetBundles"><a href="#AssetBundles" class="headerlink" title="AssetBundles"></a>AssetBundles</h4><blockquote>
+<p>An AssetBundle is an archive file containing platform specific Assets (Models, Textures, Prefabs, Audio clips, and even entire Scenes) that can be loaded at runtime.</p>
+</blockquote>
+<p>通常推荐使用AssetBundle来加载资源，使用AssetBundle可以按更小的包来管理资源、更新资源，同时还可以加快游戏启动速度。更深入的内容可以看看Unity官方的文章<a href="https://unity3d.com/learn/tutorials/temas/best-practices/resources-folder" target="_blank" rel="noopener">《The Resources folder》</a>。</p>
+<p>加载AssetBundle需要我们自己去维护依赖关系，对比起Resources来说更加麻烦。通常在开发的时候使用Resources加载，而在发布版本使用AssetBundle。这里需要实现自己的加载器来满足两套资源的切换。</p>
+<h3 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h3><ul>
+<li>统一Resources和AssetBundles加载</li>
+<li>类似的加载接口设计，包括同步与异步</li>
+<li>强引用计数管理，Load与Unload匹配</li>
+<li>支持按优先级加载资源</li>
+<li>支持配置系统开销，异步加载开销</li>
+</ul>
+<p>对外实现为静态接口，正常情况下支持Editor运行时与非运行时，运行时不管在PC还是手机都支持Resources与AssetBundles无缝切换。所有的加载路径参数统一为Resources目录相对路径且不包含扩展名，这里要求在同一目录不要有同名文件（仅扩展名不一样）。按类型匹配资源是较烦琐的工作，而且对于Object基类加载，无法匹配到正确的资源。</p>
+<p>异步接口定义一个自己Request类返回，除了原有的ResourceRequest数据，这里新增一个打断属性。当不再持有这个对象的时候设置打断属性来中断加载。同时这里还支持配置回调接口，这样不需要每次更新去查询状态，资源管理器在异步加载完成后执行回调接口。</p>
+<p>异步加载接口增加优先级参数，优先加载高优先级的对象。自己维护一个优先级列表，并发起一定数量的异步加载请求，对于在队列中被打断的资源则可以节省一次资源价值请求。</p>
+<p>然后还要关注异步加载的开销，避免异步加载占用太多的主线程时间。Unity可以通过配置<a href="https://docs.unity3d.com/ScriptReference/Application-backgroundLoadingPriority.html" target="_blank" rel="noopener">Application.backgroundLoadingPriority</a>来约束开销。如果要求游戏跑30帧的话，建议配置为Normal即可，在过场景的情况下，则配置成High来提高加载速度。</p>
+<ul>
+<li>ThreadPriority.Low - 2ms;</li>
+<li>ThreadPriority.BelowNormal - 4ms;</li>
+<li>ThreadPriority.Normal - 10ms;</li>
+<li>ThreadPriority.High - 50ms.</li>
+</ul>
+<p>由于实现了自己Request，所以这里也要实现自己的时间片管理器。实例化对象与回调接口的开销都是不可预期的，我们配置一个每帧最大执行时间做平滑。</p>
+<p>最后讨论下资源卸载策略，实时卸载资源导致资源反复加载，引起游戏卡顿。通常会缓存一定数量的资源来改善体验，对于非GameObject和Component的Asset资源，可以使用UnloadAsset接口直接卸载。剩下的GameObject，通过取消资源管理器对对象的持有再调用Resources.UnloadUnusedAssets接口来卸载。由于我们使用了强引用计数管理，所以在清理的时候通过对引用计数的判断就可以正确的清理资源。特别对于使用AssetBundle加载资源的情况，错误的管理可能会导致资源重复加载，浪费内存。</p>
+<h4 id="资源对象池"><a href="#资源对象池" class="headerlink" title="资源对象池"></a>资源对象池</h4><p>资源加载器负责加载、卸载资源，同时缓存资源，这里的资源对象池特指<strong>GameObject资源池</strong>。GameObject资源通常带有自己的数据，在加载的时候需要实例化一份以便使用。实例化GameObject是一个开销较大的操作，同时也会带来较高的GC Alloc（内存分配）。资源对象池就是一个GameObject对象池用于缓存实例化的GameObject对象。</p>
+<p>资源对象池在使用上要注意GameObject对象的可复用性，开始的时候加载一个预制体（Prefab）是一个干净的数据。外部逻辑会修改GameObject上的数据、添加新的组件，之后这个对象会入池。设计上如果一个对象需要使用对象池的复用功能，逻辑需要保证这个GameObject是可复用的，这并不是一件容易的事情。把状态还原重置本身就有一定的开销，如果实例化一个对象的成本低于重置数据的开销，那就不需要对象池，每次重新实例化即可。</p>
+<p>同时在对象入池的时候还需要做一项工作是让对象不可见，与销毁一个对象（对象入池）在这里保持行为一致。有两个常见的做法，一个是SetActive(false)，还有一个做法是把对象移出摄像机。对于对象数特别多的对象修改坐标的开销较大，对于组件较多的对象修改激活状态的开销可能会更大。这里提供了三种入池行为，InActive、InVisible、Destroy用于处理上面讨论的情况。</p>
+<p>资源对象池封装实现自己的一个Spawn接口，表示生成一个对象，然后对应的一个Despawn接口用于销毁对象。这里还提供了异步的SpawnAsync接口用于异步加载以及错帧实例化，使游戏体验更加平滑。对于Spawn接口提供带初始坐标的实例化接口与Instantiate保持一致，提供初始坐标减少坐标次数，一般来说可以得到5%-10%的性能提升。对于一些拖尾特效，正确的坐标也可以避免特效拉一条从原点到当前位置的长线。</p>
+<p>最后讨论下资源池的缓存策略，通常资源池里面存在两种情况的资源。一种外部还存在相同的对象在使用，另一种则是所有的对象都在资源池。对于所有对象都在资源池的对象，可以认为是不使用资源根据时间淘汰。对于外部存在引用的情况，增加其权重值但还是会按时间来淘汰。存在部分类型资源会有较多的实例而部分资源只有一两个实例，这里做资源池总上限的约束而不做单类型数量约束。在激烈的战斗场景下对象数量会远远高于平时，过小的资源池上限会导致卡顿，过大的资源池上限会导致内存过高。这里增加一个资源池下限，当资源池对象数高于这个数目的时候执行按时间清理操作，然后配置一个较高的资源池上限而不用当心资源池一直占用过高的内存，得到一个性能与内存兼顾的结果。</p>
+<h3 id="资源内容分级"><a href="#资源内容分级" class="headerlink" title="资源内容分级"></a>资源内容分级</h3><p>当资源的使用上超标时，也可以通过简单的调整一些参数来开关这些对内存有较大影响的对象。<br>观察iPhone机型内存可以发现内存有较大的跨越，在2G机型可以承载游戏内容的情况下，1G机型承载不了这么多的内容。通过对资源内容进行分级，来稳定1G机型的内存使用，避免闪退。<br>|机型|内存|<br>|:–|:–:|<br>|iPhone 5 – 6P|1 GB LPDDR2/LPDDR3 DRAM|<br>|iPhone 6S – 7|2 GB LPDDR4 DRAM|<br>|iPhone 7P|3 GB LPDDR4 DRAM|</p>
+<h4 id="常见的分级内容"><a href="#常见的分级内容" class="headerlink" title="常见的分级内容"></a>常见的分级内容</h4><ul>
+<li>屏幕后期效果</li>
+<li>高低材质</li>
+<li>贴图大小减半</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void OnRenderImage(RenderTexture source, RenderTexture destination)</span><br></pre></td></tr></table></figure>
+<p>如果通过上面的OnRenderImage实现屏幕后期效果，这里的source和destination贴图都是Unity申请的与分辨率直接挂钩。在1080P的分辨率情况下，会消耗掉50M左右的内存。所以一个比较好的做法是在低内存机型上关掉这个效果。</p>
+<p>高级的材质使用更多的顶点数据与贴图，比如法线贴图、通道贴图。低级材质使用更少的贴图，通过高低材质的切换可以减少贴图到达节省内存的效果。Mesh这里也是同理，如果不需要法线则不需要有法线的顶点数据。然后缩减贴图大小也是一个不错的方法，不过保存两份贴图会使包文件变大。</p>
+<h4 id="配置资源管理参数"><a href="#配置资源管理参数" class="headerlink" title="配置资源管理参数"></a>配置资源管理参数</h4><p>前面我们为了得到一个较好的性能做了较多的资源缓存工作，针对不同的内存配置不同的参数达到优化内存的目的。内存不够带来的体验是游戏直接闪退，所以这里认为游戏稳定性的优先级高于游戏卡顿。</p>
+<p>这里主要配置Assets资源缓存数量，资源池的上限与下限，还有一些资源清理时间间隔的参数配置。这些数据可以方便的修改，通常经过一系列的压力测试可以得到一个安全配置参数。后期如果增长导致内存不够，则可以通过修改配置参数来达到稳定游戏的目的。</p>
+<h3 id="简洁的内存管理机制"><a href="#简洁的内存管理机制" class="headerlink" title="简洁的内存管理机制"></a>简洁的内存管理机制</h3><p>想要解决内存闪退，了解闪退时的内存使用情况是很有必要的。在游戏运行过程中，我们可以记录内存使用情况。同时可以对资源类型进行分类，了解细节。Unity的Profile工具虽然非常方便，功能也足够强悍。但是没有数据落地，而且采样占用额外的内存。这里自己实现了一个简易的内存Profile工具，支持数据落地方便对比，同时不占用过多的额外内存。</p>
+<p>在了解到闪退时的内存情况后，我们可以很容易就了解是在什么样的情况下内存会不够用。有哪些地方的内存使用超标，是否有可以优化的余地。极限情况下最低内存使用量。</p>
+<h4 id="内存Profile工具"><a href="#内存Profile工具" class="headerlink" title="内存Profile工具"></a>内存Profile工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Resources.FindObjectsOfTypeAll(Type type);</span><br><span class="line">Profiler.GetRuntimeMemorySize(UnityEngine.Object o);</span><br><span class="line">Profiler.GetMonoHeapSize();</span><br><span class="line">Profiler.GetTotalAllocatedMemory();</span><br></pre></td></tr></table></figure>
+<p>通过Resources.FindObjectsOfTypeAll获取当前所有的对象，通过Profiler.GetRuntimeMemorySize计算每个Object的内存大小，通过Object.name可以获取对象的名字。了解了这些信息可以实现一个简洁的内存Profile工具，对比起Unity提供的Profile工具，自己实现工具可以比较方便的做一些数据落地以及自动采样的过程。</p>
+<p>同时这个Profile工具还和自己实现的资源管理器进行了整合，可以记录当前的Assets数量，GameObject数量、缓存数量，以及引用计数为零的对象数量。这些额外的数据有较大的参考价值也可以直接记录，方便做后续的对比以及观察数据趋势。同时Profile工具还支持导出资源列表，之前提到我们的加载接口是通过路径加载做强引用计数管理。这里可以输出每个资源的路径与引用计数，可以定位资源泄露，排查资源残留的情况。</p>
+<p>数据以文本的形式记录，支持自动采集上报，之后可以对这些数据做图形化显示、分析。每次跑游戏都可以得到一份数据报告，对比数据报告可以对客户端内存使用趋势有一定的认识。避免出现内存不够导致游戏闪退的情况。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3503018-03d87ed0f242fed3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="内存Profile工具"></p>
+<p>上图是内存Profile工具在PC上采样的结果，这里对数据进行了分类，按类型和使用场景分类。通过这些数据可以得出一些指标，比如贴图不能超过50M，Mesh不能超过20M。不同场景下的资源使用情况是不同的，这里做的工作就是把50M分配给各个模块。这样做的一个好处是能找到一个人负责，同时这个人又是对这个模块最熟悉的。</p>
+<h4 id="兼顾内存与性能"><a href="#兼顾内存与性能" class="headerlink" title="兼顾内存与性能"></a>兼顾内存与性能</h4><ul>
+<li>Android 高内存，低CPU，低I/O</li>
+<li>IOS 低内存，高CPU，高I/O</li>
+</ul>
+<p>资源加载是一项非常慢的操作，如果所有的资源都实时释放，那下次加载资源带来的卡顿也会带来较差的游戏体验。由于iPhone机型内存少，加载快，可以做实时释放策略。对于Android机型内存多，加载慢，可以做预加载策略。同时还可以做带权重的资源缓存策略，资源缓存是由资源的最后使用时间和加载时间得到一个权重，优先释放加载快不经常使用的资源。这样可以在内存和性能上得到一个较好的照顾。同时在IOS上会有内存的Warning警告，当触发警告的时可以做强制性清理，避免游戏闪退。</p>
+<p>[完 Carber 2017-08-04]</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/07/13/一个灵活的AssetBundle打包工具/">一个灵活的AssetBundle打包工具</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-07-13
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>上周介绍了<a href="https://carbers.github.io/2017/07/09/Unity%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/">Unity项目中的资源配置</a>，今天和大家分享一个AssetBundle打包工具。从资源处理开始，再到Bundle工具设计，最后谈谈项目中Bundle打包方案。</p>
+<p>Unity提供了两种资源加载方式，一种是Resources，另外种就是AssetBundle。所有的资源只要放在Resources目录下，在打包的时候会自动打进去，并可以通过相应的接口加载。正常情况下Resources非常方便，可以满足日常的需求，但资源放Resources会带来资源更新上的问题。之前写过一篇文章<a href="http://www.jianshu.com/p/5206c7dc88c4" target="_blank" rel="noopener">Unity资源目录及加载接口介绍</a>可以了解些细节。</p>
+<p>假设首包所有资源都放Resources，后续更新资源的走AssetBundle，会发现AssetBundle和Resources的资源互相不兼容。当调整一个模型的材质参数后，对模型进行打包仍需要把Mesh，Texture等资源都打进去。这会导致更新包过大，同时在加载这个模型时，这些资源是不共用的，相同的资源可能在内存中存在两份。所以正常情况下，项目发布时所有需要更新的资源要打成AssetBundle。</p>
+<p>正常项目中资源的提交与变更非常频繁，手工对每个资源配置Bundle费时费力，基本不可取。所以一般项目中的Bundle都是程序自动创建的。同时为了避免有多余的资源被打包，通常需要配置哪些资源是发布资源（直接加载的），其他资源通过引用的形式获取。这个配置需要方便修改，来满足日常变更。</p>
+<p>Bundle的打包规则对资源加载速度，更新大小，重复资源数量以及最终包数量等等都有较大影响。<strong>一个可靠的Bundle打包方案应该是根据实际情况对Bundle打包规则做调整慢慢产生的。</strong></p>
+<p>在Unity 4，只有最基础的几个打包接口可以用于打包。Unity 5简化了Bundle打包时候的依赖关系，但实际如何创建Bundle以及对依赖资源的配置都节省不了。远远不能满足项目对资源打包这块的需求。</p>
+<p>这里实现的AssetBundle打包工具帮助简化这个繁琐的打包过程，同时方便做规则调整，得到更优的打包方案。目前工具<a href="https://github.com/carbers/UnityComponent/tree/master/Assets/BundleBuildTool" target="_blank" rel="noopener">BundleBuildTool</a>已经放在GitHub，可以作为一份打包实现的参考，也可以直接使用这工具来进行打包。</p>
+<h4 id="AssetBundle"><a href="#AssetBundle" class="headerlink" title="AssetBundle"></a>AssetBundle</h4><blockquote>
+<p>An AssetBundle is an archive file containing platform specific Assets (Models, Textures, Prefabs, Audio clips, and even entire Scenes) that can be loaded at runtime.</p>
+</blockquote>
+<h4 id="资源类型"><a href="#资源类型" class="headerlink" title="资源类型"></a>资源类型</h4><p>不同类型资源会有不同的打包方式，比如场景文件的打包接口和其他资源的打包接口就是不一样的。通过定义不同的资源类型，可以实现不同的打包方式，支持更多资源的打包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public enum BundleType</span><br><span class="line">&#123;</span><br><span class="line">    None = 0,</span><br><span class="line">    Script,         // .cs</span><br><span class="line">    Shader,         // .shader or build-in shader with name</span><br><span class="line">    Font,           // .ttf</span><br><span class="line">    Texture,        // .tga, .png, .jpg, .tif, .psd, .exr</span><br><span class="line">    Material,       // .mat</span><br><span class="line">    Animation,      // .anim</span><br><span class="line">    Controller,     // .controller</span><br><span class="line">    FBX,            // .fbx</span><br><span class="line">    TextAsset,      // .txt, .bytes</span><br><span class="line">    Prefab,         // .prefab</span><br><span class="line">    UnityMap,       // .unity</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于特殊类型的资源，通过类型可以做一些定制化操作。比如把所有的Script配置在一个Bundle里面，然后在启动的时候对这个Bundle做预加载。通常情况下也会把所有的Shader配置到一个Bundle里面。</p>
+<p>正常一个模型会有自己的Texture，Mesh &amp; Animation，把资源按类型打成三个包，在加载的时候可以得到更高的加载速度。Unity异步加载接口会同时进行多个资源加载，资源配置在不同的包里，可以有较好的加载速度提升，所以一般是按资源类型来进行打包。不过要注意如果太分散的话，一样会影响加载速度。</p>
+<p>资源加载速度这个是在文章<a href="https://blogs.unity3d.com/2017/04/12/asset-bundles-vs-resources-a-memory-showdown/" target="_blank" rel="noopener">Asset Bundles vs. Resources: A Memory Showdown</a>提及。</p>
+<blockquote>
+<p>These blocks sizes are optimized for loading multiple Assets and bundles in parallel. For example, you should be able to load objects from 4 to 5 Asset Bundles at the same time without the the allocators for Asset Bundle Async loading or Type Trees needing new blocks.</p>
+</blockquote>
+<h4 id="资源依赖"><a href="#资源依赖" class="headerlink" title="资源依赖"></a>资源依赖</h4><p>处理资源依赖应该是打包过程最复杂的一块功能，这里把获取资源依赖文件列表单独设计一个类，做一些特殊情况处理。如果发现一些依赖关系上的错误，除了修改资源本身外，也可以在打包环节实现一些脚步做保障。</p>
+<p>正常情况下，通过AssetDatabase.GetDependencies即可获取一个资源的所以依赖文件。但实际情况中，Unity内部是通过分析内部guid来生成依赖文件。有时候在文件里面会存在一些脏的guid这会产生多余的依赖。比如你修改一个材质贴图属性名，然后设置了一张新的贴图给这个新的属性名。打开材质文件会发现旧的属性名以及引用guid出现在材质文件，通过GetDependencies获取的最后结果也包含这个数据。实现自己获取依赖函数来处理这种多余依赖关系。同时提供带缓存接口，提高打包效率。</p>
+<p>下面是对材质依赖贴图文件获取的代码实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">MaterialProperty[] proTes = MaterialEditor.GetMaterialProperties(new Object[] &#123;mat&#125;);</span><br><span class="line">for (int i = 0; proTes != null &amp;&amp; i &lt; proTes.Length; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    if (proTes[i].type == MaterialProperty.PropType.Texture)</span><br><span class="line">    &#123;</span><br><span class="line">        Texture tex = mat.GetTexture(proTes[i].name);</span><br><span class="line">        string path = AssetDatabase.GetAssetPath(tex);</span><br><span class="line">        if (!dict.ContainsKey(path))</span><br><span class="line">        &#123;</span><br><span class="line">            dict.Add(path, path);</span><br><span class="line">        &#125;</span><br><span class="line">        Resources.UnloadAsset(tex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;   </span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h4 id="资源剔除"><a href="#资源剔除" class="headerlink" title="资源剔除"></a>资源剔除</h4><p>处理完资源依赖后，还碰到一个问题就是最后打包Assets资源。通过AssetDatabase.LoadAllAssetAtPath获取这个文件依赖的所有的Assets资源。如果对所有的这些Assets资源都做打包的话，会发现一些编辑器用数据也会被打包进去。特别是对于FBX类型文件，通常会存在一个”__preview_Take 001”的动作资源使包体变大很多。对于这些不必要的数据，在打包环节中增加一个剔除规则，减少包体大小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public static List&lt;UnityEngine.Object&gt; FilterObjectByType(UnityEngine.Object[] assets, BundleType bundleType)</span><br><span class="line">&#123;</span><br><span class="line">    List&lt;UnityEngine.Object&gt; ret = new List&lt;UnityEngine.Object&gt;();</span><br><span class="line">    foreach (UnityEngine.Object asset in assets)</span><br><span class="line">    &#123;</span><br><span class="line">        switch (bundleType)</span><br><span class="line">        &#123;</span><br><span class="line">        case BundleType.FBX:</span><br><span class="line">            if (!(asset.GetType() == typeof(AnimationClip) &amp;&amp; asset.name == &quot;__preview_Take 001&quot;))</span><br><span class="line">            &#123;</span><br><span class="line">                ret.Add(asset);</span><br><span class="line">            &#125;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            ret.Add(asset);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Unity 5刚出的时候会把这个数据打进AssetBundle造成包体过大，后面版本观察已经修复这个问题。不过也可以发现这个环节的必要性，如果发现资源出问题在这个环节处理即可。</p>
+<p>这个环节不仅可以剔除不必要的数据，还可以直接修改数据本身。就拿Mesh数据举例，美术在制作过程中会导出多余的顶点数据在文件里面(uv3,uv4…)。通常配置Optimize Mesh可以干掉这些无用数据，不过直接启用可能会出现删除了需要数据情况，比如color数据丢失。所以自己来做，通过把Mesh对象上不需要的对象数据置空，然后再打包即可。在之前分享的资源配置工具里已经做了对Mesh顶点数据的配置，基本上就是为这个打包环节服务，因为无法修改FBX文件，只能美术重新导出。</p>
+<h4 id="资源大小"><a href="#资源大小" class="headerlink" title="资源大小"></a>资源大小</h4><p>资源大小影响最后的包体大小，如果对包体大小以及更新量有关注的话，对资源大小做预估是一个非常有必要的环节。在资源大小计算环节，不能疏漏之前二个资源环节对资源的处理，同时不同类型的资源统计方式不一样。</p>
+<p>通常通过下面两个方式预估资源大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int resSize = UnityEngine.Profiling.Profiler.GetRuntimeMemorySize(asset);</span><br><span class="line">FileInfo fileInfo = new FileInfo(assetPath);</span><br><span class="line">int fileSize = fileInfo.Length;</span><br></pre></td></tr></table></figure></p>
+<p>如何对一个资源做一个大小估算，并不是一件非常方便的事情的。如果依赖资源已经在之前打包了，那这个资源的实际大小是要考虑减去依赖资源那部分的大小。如果不统计依赖资源的大小，那这个资源的包的大小也是不准确的。所以这里的实际逻辑较为复杂，但实际一个大致的值就可以了，然后观察最后的包大小做一些配置微调即可。</p>
+<h4 id="Bundle模型"><a href="#Bundle模型" class="headerlink" title="Bundle模型"></a>Bundle模型</h4><p>讨论完资源上的一些细节，下面开始Bundle设计的介绍。一个Bundle模型用name做唯一标识，为了方便管理加入了parent与children数据。同时一个Bundle应该有一个固定资源类型。为了方便对包大小做限制加入了size属性，作为资源大小的预估。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class BundleData</span><br><span class="line">&#123;</span><br><span class="line">    public string name = string.Empty;</span><br><span class="line">    public string parent = string.Empty;</span><br><span class="line">    public BundleType type = BundleType.None;</span><br><span class="line">    public BundleLoadState loadState = BundleLoadState.UnloadImmediately;</span><br><span class="line">    public int size = 0;</span><br><span class="line">    public List&lt;string&gt; includs = new List&lt;string&gt;();</span><br><span class="line">    public List&lt;string&gt; children = new List&lt;string&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最后一个Bundle包含多个资源文件路径。尽管AssetBundle是按Assets打包的，但在正常环境下的资源是以文件存在的。一个资源文件可能包含多个资源，也可能引用到其他资源。资源文件可以用路径来标识，Unity内部通过GUID来标识资源文件，所以即使你挪动文件因为GUID不变，还是可以找到这个文件。这里决定直接用资源路径来标识资源而不是使用GUID，因为挪动资源目录有较多的风险，原则上禁止挪动资源。如果真挪动了资源，按最新的资源路径生成Bundle是一个不错的选择。</p>
+<p><strong>如果有对Bundle有其他属性上的需求，在这个类扩展就好。</strong></p>
+<h4 id="Bundle创建规则"><a href="#Bundle创建规则" class="headerlink" title="Bundle创建规则"></a>Bundle创建规则</h4><p>定义Bundle后，创建Bundle是很困扰的一个问题。在大型项目中，资源的量非常大，资源之间的互相引用也较为复杂。这里定义一个数据结构帮忙创建Bundle。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class BundleImportData</span><br><span class="line">&#123;</span><br><span class="line">    public string RootPath = &quot;&quot;;</span><br><span class="line">    public string FileNameMatch = &quot;*.*&quot;;</span><br><span class="line">    public int Index = -1;</span><br><span class="line">    public int TotalCount = 0;</span><br><span class="line">    public BundleType Type = BundleType.None;</span><br><span class="line">    public BundleLoadState LoadState = BundleLoadState.OnUnloadAsset;</span><br><span class="line">    public bool Publish = false;</span><br><span class="line">    public int LimitCount = -1;</span><br><span class="line">    public int LimitKBSize = -1;</span><br><span class="line">    public bool PushDependice = false;</span><br><span class="line">    public bool SkipData = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于一个Bundle，可以约束它的大小，对象数量、类型、加载方式、打包方式。然后根据规则，自动给每个资源文件配置Bundle。</p>
+<p><strong>资源分加载资源和被依赖引用到的资源，对于直接加载的资源，需要配置Publish为True。Bundle创建就是从这些配置了Publish的资源文件以及其依赖生成的。</strong></p>
+<p>对所有可能被打包的资源配置打包规则，没有被配置资源文件，则会被一起打倒最后资源的包里面。这里会碰到一个问题，有些资源需要补分包，但是通用规则会包含不需要分包的资源。这里增加了一个<strong>SkipData</strong>属性，当为True时这些资源不单独创建Bundle。</p>
+<p>然后讨论下PushDependice属性，正常情况下只有在打Prefab类型的资源的时候才会做这个操作。因为Prefab数据本身是不共享的，然后避免Prefab与Prefab之间的复杂依赖。</p>
+<p>最后讨论下打包的顺序，因为资源之间有互相依赖，所以需要配置资源的打包顺序。这里资源的打包顺序就是BundleImportData创建的顺序。这里需要对资源之间的依赖以及资源类型有一定的认识。</p>
+<p><strong>已经配置过Bundle的资源不会变更，新增的资源会按规则配置相应的Bundle。通常规则发生变更会影响非常多的资源，如果所有资源重新配置会导致更新包过大。</strong></p>
+<h4 id="Bundle构建"><a href="#Bundle构建" class="headerlink" title="Bundle构建"></a>Bundle构建</h4><p>首次创建的Bundle，由于本地文件不存在，会触发构建。然后资源之间有互相依赖，所有被依赖的Bundle也需要参加构建。对于增量构建，这里做了一个简化设计，不自己去计算文件是否变更，而是由外部提供一个文件变化列表。通过这个列表工具自动生成Bundle构建列表，提高打包速度。</p>
+<p>在配置打包参数为<strong>BuildAssetBundleOptions.DeterministicAssetBundle</strong>后，如果不对资源做修改，两次打包的文件是一样的。所以即使有很多资源因为依赖要重新打包，最后的文件未发生变化，就不会触发更新。</p>
+<h4 id="Bundle索引"><a href="#Bundle索引" class="headerlink" title="Bundle索引"></a>Bundle索引</h4><p>Bundle构建完后只是一堆二进制文件，需要根据Bundle之间的依赖关系生成出一份数据。除了需要知道Bundle之间的依赖之外，同时还需要知道资源路径与Bundle之间的映射关系。最后还要把Bundle状态信息保存下来，用于Bundle更新、加载和卸载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class BundleState</span><br><span class="line">&#123;</span><br><span class="line">    public string bundleID = string.Empty;</span><br><span class="line">    public uint crc = 0;</span><br><span class="line">    public uint compressCrc = 0;</span><br><span class="line">    public int version = -1;</span><br><span class="line">    public long size = -1;</span><br><span class="line">    public BundleLoadState loadState = BundleLoadState.OnUnloadAsset;</span><br><span class="line">    public BundleStorePos storePos = BundleStorePos.Building;</span><br><span class="line">&#125;</span><br><span class="line">// like UnityEngine.AssetBundleManifest</span><br><span class="line">public class BundleManifest &#123; ... &#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个文件自己定义形式，可以使分散的多个文件，也可以统一放到一个文件里面，自己实现可以优化数据结构减少内存开销。</p>
+<h4 id="通用的Bundle打包方案"><a href="#通用的Bundle打包方案" class="headerlink" title="通用的Bundle打包方案"></a>通用的Bundle打包方案</h4><p>下面是在Unity Standard Assets资源上做配置后的结果<br><img src="https://upload-images.jianshu.io/upload_images/3503018-35ae7aca0795e1d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="BuildBundleTool"><br>按大小配置基础资源，然后对于Prefab和Unity文件限定下个数，避免过多的资源依赖。配置结束后点击CreateBundle就可以得到下面的结果。这里的21.3MB是由于一张贴图本身就有这么大，所以这里还是会出现很多大于2M的包，这就需要根据实际情况做微调。</p>
+<p>[完  2017-07-13 Carber]</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/07/09/Unity项目中的资源管理/">Unity项目中的资源管理</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-07-09
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p> 这是我在2017金山技术开放日分享的部分内容。从贴图资源格式配置的介绍开始，引申出资源配置工具，最后再谈谈一整套项目资源管理方案。在GitHub上可以获取到资源配置工具的代码，是基于下面理念的一份简单实现。</p>
+<p>一个3D游戏项目中的资源主要由贴图、模型、动作、声音等组成。模型设计师设计模型，场景由模型组成，角色不仅是一个精致的模型还带了各类的动作，包括走路、跑步、待机、攻击等等。各类基础资源构成了游戏的大部分元素。</p>
+<p>在我做的剑侠世界手游项目里面有上万的材质，主城更是有7000+的模型。每个角色可以有不同的外装、发型、武器、挂件、坐骑等等。承载这么多资源对内存以及性能都有非常高的要求。一个优秀的资源管理方案可以承载更多内容，满足更多的需求。</p>
+<h4 id="贴图资源配置"><a href="#贴图资源配置" class="headerlink" title="贴图资源配置"></a>贴图资源配置</h4><p>对于这资源管理，Unity提供非常丰厚的支持。以贴图为例子，Unity支持直接把原始贴图直接放进工程，不需要做任何额外处理。Unity根据贴图配置会自动生成最后的贴图数据。不同平台（IOS、Android、PC）支持的贴图格式不一样，通过配置文件的形式，最后方便的生成不同格式的贴图。这是一个非常好的做法，同时可以直观的在开发环境看到不同格式的贴图表现。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-24bec1d02b17eda6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图的配置界面"></p>
+<p>可以看到上图，贴图的配置属性非常多。不同的贴图会有不同的配置，有些属性的配置对内存和性能会有较大的影响。下图可以看到现在这是一张 512 X 512的RGB贴图，内存大小为1M。如果限定使用50M的贴图内存的话，那只能加载50张贴图，这明显是不够用的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-e4fd86184bd38619.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图初始大小"></p>
+<p>三维计算机图形渲染中一个常用的技术被称为Mipmap。为了加快渲染速度和减少图形锯齿，贴图被处理成由一系列被预先计算和优化过的图片组成的文件。对于UI使用的2D贴图，我们需要关闭Mipmap避免精度损失。同时在测试中我们也发现开启Mipmap并没有带来多少性能提升，在手游的场景中，我们的视距非常近，并没有过多这方面的需求。同时关闭Mipmap我们能节约33%内存，这是一个比较不错的提升。关闭Mipmap后，我们看到贴图变成了0.8M，这里应该是768KB。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-93727ab9a884df5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图关闭Mipmap"></p>
+<p>一个不小的提升，不过还是要注意，这是测试之后做的决定，不同情况下的决策是不一样的。</p>
+<p>接下来讨论贴图压缩，ETC是所有Android都接受的格式，这个格式的压缩质量较差。但在大部分情况下，很难在手机那么小的屏幕上看到差异，渲染本身就是一件视觉欺骗，如果觉得满意那就没问题。ETC 2对图片质量有较大的提升，但是需要 OPGL ES 3.0 以上才支持，这个要根据支持的机型做决定。这里不对压缩格式做过多的讨论，详情见<a href="https://docs.unity3d.com/Manual/class-TextureImporterOverride.html" target="_blank" rel="noopener">Unity官方文档</a>。</p>
+<p>设置压缩格式为ETC后贴图的大小为128KB，减小了6倍，这是一个非常大的提升。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-2b93c83e7ad74d15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图压缩后"></p>
+<p>再来说说Max Size这个属性，真的需要512X512这么大的一张贴图么，256X256是不是足够了。做出这样的决定，然后在真机上看看效果，贴图大小限制成256后，最后的贴图大小为32KB。总计减少了32倍，现在我们可以加载1600张贴图了，相信这个数字能满足大部分项目的需求了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-e1e760884541ab0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图设置最大尺寸后"></p>
+<p>最后来说说Read/Write Enable这个属性，如果打开这个属性，会使运行时贴图大小翻倍，内存中会额外存储一份贴图数据。在大部分情况下这是不必要的，所以默认关闭这个属性，在需要的时候开启。</p>
+<p>在这种最优的配置下我们使贴图大小缩小了64倍，从开始的25张到最后的1600张，令人惊奇的优化。资源格式配置在整体资源管理中属于最基础的模块，但同时也是最重要的模块，他决定了你能显示多少资源。</p>
+<h4 id="资源配置工具"><a href="#资源配置工具" class="headerlink" title="资源配置工具"></a>资源配置工具</h4><p>正常情况下贴图资源使由美术提交，不同种类的贴图有不一样的配置文件，Ios的配置格式和Android也会有区别。很难要求美术对资源配置这块有深入的理解，同时每次都要配置一些属性也显的非常麻烦。这时候就需要程序来帮忙做一些工作了。</p>
+<p>首先根据前面的认识，我们抽离出部分属性设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class TextureImportData : ImportData </span><br><span class="line">&#123;</span><br><span class="line">    public TextureAlphaMode AlphaMode = TextureAlphaMode.FormTexture;</span><br><span class="line">    public TextureImporterType TexType = TextureImporterType.Default;</span><br><span class="line">    public TextureImporterShape ShapeType = TextureImporterShape.Texture2D;</span><br><span class="line">    public TextureImporterFormat AndroidFormat = TextureImporterFormat.ETC2_RGB4;</span><br><span class="line">    public TextureImporterFormat IosFormat = TextureImporterFormat.PVRTC_RGB4;</span><br><span class="line">    public bool ReadWriteEnable = false;</span><br><span class="line">    public bool MipmapEnable = false;</span><br><span class="line">    public int MaxSize = -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后可以给一个贴图应用这个配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public static void FormatTexture(string path, TextureImportData data)</span><br><span class="line">&#123;</span><br><span class="line">    TextureImporter tImporter = AssetImporter.GetAtPath(path) as TextureImporter;</span><br><span class="line">    if (tImporter == null) return;</span><br><span class="line"></span><br><span class="line">    if (tImporter.textureType != data.TexType)</span><br><span class="line">    &#123;</span><br><span class="line">        tImporter.textureType = data.TexType;</span><br><span class="line">    &#125;</span><br><span class="line">    tImporter.isReadable = data.ReadWriteEnable;</span><br><span class="line">    tImporter.mipmapEnabled = data.MipmapEnable;</span><br><span class="line"></span><br><span class="line">    if (data.MaxSize &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        tImporter.maxTextureSize = data.MaxSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    TextureImporterPlatformSettings settingAndroid = tImporter.GetPlatformTextureSettings(EditorConst.PlatformAndroid);</span><br><span class="line">    settingAndroid.overridden = true;</span><br><span class="line">    settingAndroid.format = data.GetFormatByAlphaMode(data.AndroidFormat, tImporter);</span><br><span class="line">    settingAndroid.maxTextureSize = tImporter.maxTextureSize;</span><br><span class="line">    tImporter.SetPlatformTextureSettings(settingAndroid);</span><br><span class="line"></span><br><span class="line">    TextureImporterPlatformSettings settingIos = tImporter.GetPlatformTextureSettings(EditorConst.PlatformIos);</span><br><span class="line">    settingIos.overridden = true;</span><br><span class="line">    settingIos.format = data.GetFormatByAlphaMode(data.IosFormat, tImporter);</span><br><span class="line">    settingIos.maxTextureSize = tImporter.maxTextureSize;</span><br><span class="line">    tImporter.SetPlatformTextureSettings(settingIos);</span><br><span class="line"></span><br><span class="line">    tImporter.SaveAndReimport();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最后和美术做了一个约定或者说规范，可以按目录和一个正则来批量设置贴图格式。</p>
+<p>一般来说十几条规则就能覆盖所有情况，如果有疏漏，增加一个规则即可。这里还要需要考虑一个细节问题就是如果一个文件被多个规则覆盖怎么办。设想一开始添加的是一些通用规则，后面添加的则是一些特殊规则。而且按照一条条规则去设置属性，后面的规则也会覆盖前面的规则。所以这里只用引入一个规则配置的顺序属性即可，顺序可以修改，以顺序靠后的规则为准。然后为了方便查看，还可以记录当前规则下贴图的数量以及大小，这样有一个更加直观的认识。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class ImportData &#123;</span><br><span class="line">    public string RootPath = &quot;ArtWorks&quot;;</span><br><span class="line">    public string FileNameMatch = &quot;*.*&quot;;</span><br><span class="line">    public int  Index = -1;</span><br><span class="line">    public int  TotalCount = 0;</span><br><span class="line">    public int  TotalMemuse = 0;</span><br><span class="line">    public bool PreBuild = true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>设计完了数据，最后就是实现一个窗口界面方便来配置这些属性，同时可以把需要的信息都显示窗口上。窗口是直接用Unity的API实现了，还是非常方便的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-ebbb0bc8ed96ba75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图格式化工具"></p>
+<p>最后我把资源配置工具交给技术美术(Tech Artist)来使用，美术这边有需求有调整，直接配置即可，不需要继续来参与。</p>
+<h4 id="项目中的资源管理"><a href="#项目中的资源管理" class="headerlink" title="项目中的资源管理"></a>项目中的资源管理</h4><p>然后考虑是否有资源漏配，资源配置是否合理，目前我们资源处于一个什么样的情况？需要一个方案来获取更多信息。上面的工具已经看到能统计贴图的资源大小，实现一个函数可以导出资源使用情况的统计，以及按大小排序的资源列表。然后把每次统计结果保存下来，对比每天的统计结果可以观察到项目中的一个资源增长情况。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3503018-1c02982b171c2cd1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="贴图统计列表"></p>
+<p>我特意选了一张有问题的贴图列表，可以观察到如果配置有问题，很容易在列表中暴露出来。</p>
+<p>还有一些想法没有实践，比如不仅显示贴图大小，还显示贴图的压缩格式。知道这张贴图的大小是2M，但是不知道是压缩前2M还是压缩之后的。同时项目中不可避免的还是存在重复贴图，可以考虑程序实现一个功能做重复贴图对比等等。</p>
+<p>不过要考虑投入成本与收益，关注Top10与每日的资源变化已经对项目有一定程度上的把控。可以把精力放到更关键的产品开发上，这里实际做了产品质量的保障。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>从关注资源本身配置的影响，到如何设置资源配置，到最后一个落地的总体预览数据。所有的东西都非常简单，主要分享的是思考的过程与方式。虽然这里只是介绍了如何在Unity项目下的工作，但很多思路和方法都是共用。不过这只是我在当前项目经验下的一下总结，不同的项目有不同背景与问题。还是需要针对问题本身深入思考，提出切实可行的方案。</p>
+<p>同时这里的很多工作是展示了更多的信息，这些信息是整个项目都是可以观察到的。越多的人了解一个事物，那修改这个事物就会显得更加的容易。比如美术也能观察到我们项目资源量爆炸了，然后就下意识的控制资源量的增长。</p>
+<h4 id="附"><a href="#附" class="headerlink" title="附"></a>附</h4><p><a href="https://github.com/carbers/UnityComponent/tree/master/Assets/ResourceFormat" target="_blank" rel="noopener">资源配置工具</a></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+      
+  <nav class="pagination">
+    
+    
+  </nav>
+
+
+    
+  </section>
+
+          </div>
+          
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Carber Lee</span>
+  </span>
 </div>
 
+      </footer>
 
-
-    <!-- Footer -->
-    <hr>
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-
-                    
-
-                    
-                        <li>
-                            <a href="https://github.com/carbers" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-                </ul>
-                <p class="copyright text-muted">&copy; 2018 Carber Lee<br></p>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-            </div>
-        </div>
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
     </div>
-</footer>
 
-
-    <!-- After footer scripts -->
     
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Disqus Comments -->
+    
+  
 
 
 
-</body>
+  
+  
 
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.10.1"></script>
+
+  </body>
 </html>
